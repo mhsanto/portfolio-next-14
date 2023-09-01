@@ -32,37 +32,3 @@ export default function Home() {
     </>
   )
 }
-// "use client";
-
-// import Link from "next/link";
-// import React from "react";
-
-// const HeaderPage = () => {
-//   const links = [
-//     {
-//       id: 1,
-//       href: "/",
-//       text: "HOME",
-//     },
-//     { id: 2, href: "/about", text: "ABOUT" },
-//     { id: 3, href: "/projects", text: "PROJECTS" },
-//     { id: 4, href: "/skills", text: "SKILLS" },
-//     { id: 5, href: "/footer", text: "CONTACT" },
-//   ];
-//   return (
-//     <header className="flex bg-black text-white">
-//       <div className="logo ">
-//         <Link href="/">SANTO</Link>
-//       </div>
-//       <div className="header-items flex ">
-//         {links.map((link) => (
-//           <div key={link.id} className="header-item">
-//             <Link href={link.href}>{link.text}</Link>
-//           </div>
-//         ))}
-//       </div>
-//     </header>
-//   );
-// };
-
-// export default HeaderPage;
