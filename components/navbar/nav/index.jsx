@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { menuSlide } from '../anim';
 import Link from './Link';
-import Curve from './Curve';
-import Footer from './Footer';
+import Curve from './curve';
+import Footer from './footer';
 
 const navItems = [
   {
