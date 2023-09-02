@@ -8,6 +8,11 @@ body,
   height: 100vh;
   height: 100%;
   cursor: wait;
+
+}
+.container{
+  width: 90%;
+  margin-inline: auto;
 }
 header {
   position: fixed;

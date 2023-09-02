@@ -1,21 +1,21 @@
-"use client";
-import Loader from "@/components/Loader";
-import { AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
-
+import FramerAnimation from "@/components/FramerAnimation";
+import styles from "./styles.module.scss";
+import Image from "next/image";
+import logo from "../public/logo.png";
+import Link from "next/link";
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-      document.body.style.cursor = "default";
-    }, 2300);
-  }, []);
-
   return (
-    <main className="">
-      <AnimatePresence mode="wait">{isLoading && <Loader />}</AnimatePresence>
-      <h1>Home</h1>
+    <main >
+      <FramerAnimation />
+
+
+        <div className={styles.logo}>
+          {/* <Image src={logo} height={50} width={200}alt="MAHMODUL HASAN"/> */}
+          <Link href="/">Mahmodul</Link>
+        </div>
+
+    
+ 
     </main>
   );
 }
