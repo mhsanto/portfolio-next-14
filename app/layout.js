@@ -1,8 +1,8 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-import Navbar from '../components/navbar'
-import PageWrapper from "@/components/PageWrapper";
+import { Inter, Montserrat } from "next/font/google";
+import Navbar from "../components/navbar";
 const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Mahmodul's Portfolio",
@@ -12,10 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <Navbar />
         {children}
-  
       </body>
     </html>
   );

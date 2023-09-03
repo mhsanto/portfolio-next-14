@@ -4,27 +4,13 @@ import styles from "./style.module.scss";
 import { motion } from "framer-motion";
 import { slideUp ,opacity} from "./anim";
 
-const Loader = () => {
+const Loader = ({words}) => {
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
   useEffect(() => {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
   }, []);
-  const words = [
-    "FRONTEND DEVELOPER",
-    "WEB DESIGNER",
-    "REACT",
-    "NEXT 13",
-    'NEXTAUTH',
-    "PRISMA",
-    "NODE",
-    "TAILWIND",
-    "MATERIAL UI",
-    "FIREBASE",
-    "EXPRESS",
-    "MONGODB",
-    "TYPESCRIPT",
-  ];
+ 
 
   useEffect(() => {
     if (index == words.length - 1) return;

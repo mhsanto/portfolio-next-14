@@ -1,6 +1,48 @@
-.logo{
-    font-size: 2.5rem;
+.header {
+  position: relative;
+  .logo {
+    font-size: 3.5rem;
     font-weight: bold;
-    letter-spacing: -3px;
-  
+    letter-spacing: -15px;
+    padding-left: 3rem;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+}
+// .connect{
+//   position: absolute;
+//   left: 50%;
+//   font-weight: 500;
+//   font-size: 1.2rem;
+//   top: 15%;
+//   transform: translateX(-50%);
+// }
+.hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  text-align: start;
+  max-height: 100vh;
+  width: 100vw;
+  p {
+    font-size: 7.5rem;
+    font-weight: bold;
+    &:first-child {
+      padding-left: 11px;
+      letter-spacing: 8px;
+    }
+    &:nth-child(2) {
+      margin-top: -3rem;
+    }
+  }
+  span {
+    font-size: 2rem;
+  }
 }
