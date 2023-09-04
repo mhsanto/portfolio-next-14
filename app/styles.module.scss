@@ -5,6 +5,7 @@
     font-weight: bold;
     letter-spacing: -15px;
     padding-left: 3rem;
+    padding-top: 1rem;
     a {
       text-decoration: none;
       color: black;
@@ -12,14 +13,18 @@
   }
 
 }
-// .connect{
-//   position: absolute;
-//   left: 50%;
-//   font-weight: 500;
-//   font-size: 1.2rem;
-//   top: 15%;
-//   transform: translateX(-50%);
-// }
+.connect{
+  position: absolute;
+  left: 50%;
+  font-weight: 500;
+  font-size: 1.2rem;
+  top: 25%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
 .hero {
   height: 70vh;
   display: flex;
@@ -31,8 +36,11 @@
   text-align: start;
   max-height: 100vh;
   width: 100vw;
+ 
   p {
-    font-size: 7.5rem;
+    max-width: 100%;
+    overflow: hidden;
+    font-size: 7rem;
     font-weight: bold;
     &:first-child {
       padding-left: 11px;
@@ -44,5 +52,6 @@
   }
   span {
     font-size: 2rem;
+    font-weight: 500;
   }
 }

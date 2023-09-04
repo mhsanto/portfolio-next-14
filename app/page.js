@@ -1,8 +1,9 @@
 import FramerAnimation from "@/components/FramerAnimation";
 import styles from "./styles.module.scss";
-
-
+import LinkedinImage from "../public/linkedin.svg";
+import Linkedin from "@/components/Socials/Linkedin";
 import Link from "next/link";
+import Image from "next/image";
 
 const words = [
   "FRONTEND DEVELOPER",
@@ -21,7 +22,7 @@ const words = [
 ];
 export default function Home() {
   return (
-    <main >
+    <main>
       {/* <FramerAnimation words={words} /> */}
 
       <header className={styles.header}>
@@ -30,15 +31,28 @@ export default function Home() {
           <Link href="/">MH</Link>
         </div>
 
-        <span className={styles.connect}>Let's Connect </span>
+        <div className={styles.connect}>
+          {" "}
+          <span>Let's Connect </span>
+          <Linkedin>
+            {" "}
+            <Image
+              className="linkedin"
+              src={LinkedinImage}
+              height={30}
+              width={30}
+              alt="linkein Logo"
+            />
+          </Linkedin>
+        </div>
       </header>
-      <section className={styles.hero}>
-        <p>FRONTEND</p>
-        <p>DEVELOPER</p>
-     <div>
-     <span>MAHMODUL HASAN</span>
-     </div>
-      </section>
+      <div className="flex">
+        <section className={styles.hero}>
+          <p>FRONTEND</p>
+          <p>DEVELOPER</p>
+          <span>MAHMODUL HASAN</span>
+        </section>
+      </div>
     </main>
   );
 }

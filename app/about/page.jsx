@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import useMousePosition from "@/hooks/useMousePostion";
 import FramerAnimation from "@/components/FramerAnimation";
+import Image from "next/image";
 
 export default function About() {
   const [isHovered, setIsHovered] = useState(false);
@@ -16,6 +17,7 @@ export default function About() {
     <>
       <FramerAnimation words={words} />
       <main className={styles.main}>
+ 
         <motion.div
           className={styles.mask}
           animate={{

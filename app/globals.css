@@ -4,18 +4,21 @@
   box-sizing: border-box;
 
 }
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body,
 :root {
   width: 100vw;
   height: 100vh;
   height: 100%;
   cursor: wait;
- 
+  max-width: 100%;
+ user-select: none;
+ -webkit-user-select: none !important;
 }
-.container {
-  width: 90%;
-  margin-inline: auto;
-}
+
 header {
   position: fixed;
   width: 100%;
