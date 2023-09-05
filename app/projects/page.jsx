@@ -9,32 +9,35 @@ const projects = [
   {
     title: `Restaurant Site `,
     src: "restaurant.webp",
+    tech: "REACT,RTK,FIREBASE,REACT-FORM",
     color: "#000000",
-    href:"https://santo-react-restaurant.netlify.app/"
+    href: "https://santo-react-restaurant.netlify.app/",
   },
   {
     title: "Netflix Clone",
     src: "netflixClone.webp",
+    tech: "REACT,RTK,FIREBASE,MOVIE API",
     color: "#EFE8D3",
-    href:"https://clone-netflix-clone.netlify.app"
+    href: "https://clone-netflix-clone.netlify.app",
   },
   {
     title: "Bootstrap E-Commerce",
+    tech: "HTML,CSS,BOOTSTRAP-5",
     src: "bootstrap.webp",
     color: "#EFE8D3",
 
-    href:"https://mhsanto.github.io/Bootstarp-E-commerce-website/"
-
+    href: "https://mhsanto.github.io/Bootstarp-E-commerce-website/",
   },
 
   {
     title: "Concept Social Media",
+    tech: "HTML,CSS,VANILLA JS",
     src: "SocialSite.webp",
     color: "#706D63",
-    href:"https://mhsanto.github.io/mySocialMedia/"
+    href: "https://mhsanto.github.io/mySocialMedia/",
   },
 ];
-const words = ["MY PROJECTS"]
+const words = ["MY PROJECTS"];
 export default function Home() {
   const [modal, setModal] = useState({ active: false, index: 0 });
 
@@ -49,9 +52,8 @@ export default function Home() {
               <Project
                 index={index}
                 title={project.title}
-
                 href={project.href}
-
+                tech={project.tech}
                 setModal={setModal}
                 key={index}
               />

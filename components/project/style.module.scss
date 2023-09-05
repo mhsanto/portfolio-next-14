@@ -1,37 +1,55 @@
-.project{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 100px 50px 100px;
-    border-top: 1px solid rgb(201, 201, 201);
-    cursor: pointer;
-    transition: all 0.2s;
+.project {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px 50px 100px;
+  border-top: 1px solid rgb(201, 201, 201);
+  cursor: pointer;
+  overflow-y: hidden;
+  transition: all 0.2s;
+  @media (max-width: 480px) {
+    padding: 0;
+    flex-direction: column;
+  }
+  @media (max-width: 768px) {
+    padding: 0;
+    padding:  2rem 1rem;
+    flex-direction: column;
+
+  }
 }
-.project:last-of-type{
-    border-bottom: 1px solid rgb(201, 201, 201);
+.project:last-of-type {
+  border-bottom: 1px solid rgb(201, 201, 201);
 }
 
-.project:hover{
-    opacity: 0.5;
+.project:hover {
+  opacity: 0.5;
 }
 
-.project:hover h2{
-    transform: translateX(-10px);
+.project:hover h2 {
+  transform: translateX(-10px);
 }
 
-.project:hover p{
-    transform: translateX(10px);
+.project:hover p {
+  transform: translateX(10px);
 }
 
-.project h2{
-    font-size: clamp(1.88rem, calc(1.54rem + 1.69vw), 3.63rem);
-    margin: 0px;
-    font-weight: 400;
-    transition: all 0.4s;
+.project h2 {
+  font-size: clamp(1.08rem, calc(1.2rem + 1.69vw), 3.63rem);
+  margin: 0px;
+  font-weight: 400;
+  transition: all 0.4s;
+  @media (max-width: 480px) {
+    text-align: center;
+  }
 }
 
-.project p{
-    transition: all 0.4s;
+.project p {
+  transition: all 0.4s;
+  font-weight: 300;
+  @media (max-width: 768px) {
+    font-size: 14px;
     font-weight: 300;
+  }
 }

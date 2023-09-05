@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./style.module.scss";
 import Link from "next/link";
 
-export default function index({ index, title, href, setModal }) {
+export default function index({ index, title, href, setModal,tech }) {
   return (
     <Link href={href} target="_black" onMouseEnter={() => {
         setModal({ active: true, index });
@@ -15,7 +15,7 @@ export default function index({ index, title, href, setModal }) {
 
      
         <h2> {title}</h2>
-        <p>Design & Development</p>
+        <p>{tech}</p>
  
     </Link>
   );

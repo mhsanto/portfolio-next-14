@@ -1,5 +1,5 @@
 .modalContainer{
-    height: 350px;
+    height: 250px;
     width: 400px;
     position: absolute;
     background-color: white;
@@ -8,6 +8,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width:480px) {
+        width: 300px;
+        height: 200px;
+    }
 }
 
 .modalSlider{
