@@ -22,7 +22,9 @@ const projects = [
     title: "Bootstrap E-Commerce",
     src: "bootstrap.webp",
     color: "#EFE8D3",
+
     href:"https://mhsanto.github.io/Bootstarp-E-commerce-website/"
+
   },
 
   {
@@ -47,7 +49,9 @@ export default function Home() {
               <Project
                 index={index}
                 title={project.title}
+
                 href={project.href}
+
                 setModal={setModal}
                 key={index}
               />

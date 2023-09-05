@@ -20,3 +20,4 @@ export default function index({ index, title, href, setModal }) {
     </Link>
   );
 }
+
