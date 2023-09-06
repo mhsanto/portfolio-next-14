@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { menuSlide } from '../anim';
 import Link from './Link';
 import Curve from './curve';
-import Footer from './footer';
+import Footer from './footer/index';
 
 const navItems = [
   {
@@ -25,7 +25,7 @@ const navItems = [
     href: "/skills",
   },
   {
-    title: "ABOUT",
+    title: "CONTACT ME",
     href: "/footer",
   },
 ]

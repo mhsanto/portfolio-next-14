@@ -18,7 +18,7 @@ const Loader = ({words}) => {
       () => {
         setIndex(index + 1);
       },
-      index == 0 ? 500 : 150
+      index == 0 ? 800 : 150
     );
   }, [index]);
   const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${

@@ -7,13 +7,16 @@
   background-color: black;
   outline: #455ce9;
   border: 1px solid #455ce9;
-
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
   cursor: pointer;
+  @media (max-width: 480px) {
+    width: 60px;
+    height: 60px;
+  }
   .burger {
     width: 100%;
     &::after,

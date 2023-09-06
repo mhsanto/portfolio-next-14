@@ -6,6 +6,13 @@
     letter-spacing: -15px;
     padding-left: 3rem;
     padding-top: 1rem;
+    @media (max-width:480px) {
+        font-size: 2.5rem;
+        letter-spacing: -11px;
+        padding-left: 0rem;
+        padding-top: 0rem;
+    
+    }
     a {
       text-decoration: none;
       color: black;
@@ -40,7 +47,7 @@
   p {
     max-width: 100%;
     overflow: hidden;
-    font-size: 7rem;
+    font-size: clamp(3.00rem, calc(2.16rem + 4.19vw), 7.19rem);
     font-weight: bold;
     &:first-child {
       padding-left: 11px;

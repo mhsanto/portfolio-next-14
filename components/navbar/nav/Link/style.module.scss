@@ -2,7 +2,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    
+    flex-wrap: wrap;
+  
     .indicator{
         width: 10px;
         height: 10px;
@@ -10,5 +11,8 @@
         border-radius: 50%;
         position: absolute;
         left: -30px;
+        @media (max-width :480px) {
+            left: -20px;
+        }
     }
 }

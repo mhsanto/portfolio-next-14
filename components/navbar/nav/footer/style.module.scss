@@ -2,6 +2,20 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    font-size: 12px;
-    gap: 40px;
+    font-size: 1rem;
+    gap: 2rem;
+    padding-bottom: 1rem;
+  @media (max-width:480px) {
+    font-size:.8rem;
+    gap: 10px;
+    padding-bottom: 3rem;
+    padding-left: 0;
+    
+  }
+   & > *{
+    transition: 0.3 ease-in;
+    &:hover{
+        opacity: 0.8;
+    }
+   }
 }

@@ -7,6 +7,9 @@ const projects = [
   {
     title: "HTML5 & CSS3",
     color: "#F06318",
+    background: "rgb(240,99,24)",
+    background:
+      "linear-gradient(90deg, rgba(240,99,24,1) 22%, rgba(33,76,229,1) 100%)",
   },
   {
     title: "JAVASCRIPT & TYPESCRIPT",
@@ -18,26 +21,30 @@ const projects = [
   {
     title: "REACT & NEXT.13",
     color: "#18F0E8",
+    background: "rgb(0,216,255)",
+    background:
+      "linear-gradient(90deg, rgba(0,216,255,1) 37%, rgba(255,255,255,1) 100%)",
   },
   {
     title: "NODE.JS & EXPRESS.JS",
-    color: "#8C0CF0",
+    color: "#56A444",
   },
   {
     title: "MONGODB & PRISMA & MONGOOSE",
-    color: "#F0183C",
+    color: "#123B51",
+  
   },
   {
     title: "BOOTSTRAP.5 & TAILWIND & MUI",
-    color: "#F0BA18",
+    color: "#16BECB",
   },
   {
     title: "GIT & GITHUB",
-    color: "#0C34F0",
+    color: "#F05030",
   },
   {
-    title: "FIREBASE & FIRESTORE",
-    color: "#0CBCF0",
+    title: "FIREBASE & NEXT-AUTH",
+    color: "#FCCA3F",
   },
   {
     title: " PHOTOSHOP & FIGMA & ILLUSTRATOR",
@@ -60,6 +67,7 @@ export default function Skills() {
   const manageMouseLeave = (e, index) => {
     gsap.to(e.target, {
       top: "0",
+      backgroundColor: "white",
       background: "white",
       duration: 0.3,
       delay: 0.1,
