@@ -1,6 +1,6 @@
 .menu {
   height: 100vh;
-  background-color: rgb(41, 41, 41);
+  background-color: black;
   position: fixed;
   right: 0;
   top: 0;
@@ -13,7 +13,7 @@
   .body {
     box-sizing: border-box;
     height: 100%;
-    padding: 0 100px;
+    padding: 0 50px 0 70px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     .nav {
       display: flex;
       flex-direction: column;
-      font-size: clamp(2rem, calc(3.05rem + 0.38vw), 2.7rem);
+      font-size: clamp(2rem, calc(3rem + 0.35vw), 2.7rem);
       gap: 12px;
       margin-top: 80px;
       @media (max-width: 480px) {

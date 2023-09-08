@@ -14,9 +14,7 @@ export default function index() {
       <Link href="https://www.facebook.com/mhsanto072" target="_blank">
         FACEBOOK
       </Link>
-      <Link href="mailto: santomh27@gmail.com" target="_blank">
-        EMAIL ME
-      </Link> 
+ 
     </div>
   );
 }

@@ -1,6 +1,8 @@
 .main {
-  height: 100vh;
-
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .mask,
   .body {
     width: 100%;
@@ -11,6 +13,8 @@
     justify-content: center;
     color: black;
     font-size: 45px;
+    font-weight: 500;
+    padding: 0 3rem;
     line-height: 55px;
     cursor: default;
     @media (max-width: 768px) {
