@@ -1,6 +1,6 @@
 .menu {
   height: 100vh;
-  background-color: black;
+  background-color: rgb(14, 14, 14);
   position: fixed;
   right: 0;
   top: 0;
@@ -8,7 +8,7 @@
   z-index: 50;
   @media (max-width: 480px) {
     left: 0;
-    padding: 0 0 ;
+    padding: 0 0;
   }
   .body {
     box-sizing: border-box;
@@ -27,7 +27,7 @@
       gap: 12px;
       margin-top: 80px;
       @media (max-width: 480px) {
-       gap:30px;
+        gap: 30px;
       }
       .header {
         color: rgb(153, 153, 153);

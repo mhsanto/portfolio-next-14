@@ -2,10 +2,12 @@
     display: flex;
     width: 100%;
     justify-content: space-around;
-    font-size: 13px;
-    letter-spacing: -2px;
+    font-size: 14px;
     gap: 2rem;
     padding-bottom: 1rem;
+    &:first-child{
+      justify-self: flex-start;
+    }
   @media (max-width:480px) {
     font-size:.8rem;
     gap: 10px;

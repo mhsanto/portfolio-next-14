@@ -1,8 +1,9 @@
-* ,*::after,*::before{
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 html::-webkit-scrollbar {
   display: none;
@@ -15,14 +16,12 @@ body,
   height: 100%;
   cursor: wait;
   max-width: 100%;
- user-select: none;
- -webkit-user-select: none !important;
-
+  user-select: none;
+  -webkit-user-select: none !important;
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
-
 }
 header {
   position: fixed;

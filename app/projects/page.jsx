@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <>
-      <FramerAnimation words={words} />
+      {/* <FramerAnimation words={words} /> */}
 
       <main className={styles.main}>
         <div className={styles.body}>

@@ -4,20 +4,20 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import useMousePosition from "@/hooks/useMousePostion";
 import FramerAnimation from "@/components/FramerAnimation";
-import Image from "next/image";
 
-export default function About() {
+export const metadata = {
+  title: "about",
+};
+export default  function About() {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
   const size = isHovered ? 400 : 40;
   const words = ["ABOUT ME"];
 
-
   return (
     <>
       <FramerAnimation words={words} />
       <main className={styles.main}>
- 
         <motion.div
           className={styles.mask}
           animate={{
@@ -35,16 +35,21 @@ export default function About() {
             onMouseLeave={() => {
               setIsHovered(false);
             }}
+            onTouchStart={() => {
+              setIsHovered(true);
+            }}
+            onTouchEnd={() => {
+              setIsHovered(false);
+            }}
           >
-            Eager to
-            quickly become knowledgeable about the newest software and web
-            technologies. Able to perform successfully both alone and in teams.
-           ( Not sure about this one.)
+            Eager to quickly become knowledgeable about the newest software and
+            web technologies. Able to perform successfully both alone and in
+            teams. ( Not sure about this one.)
           </motion.p>
         </motion.div>
 
         <div className={styles.body}>
-          <motion.p initial="initial" animate="animate" >
+          <motion.p initial="initial" animate="animate">
             I'm <span>Mahmodul Hasan Santo</span> a{" "}
             <span>Frontend Web Developer</span> that creates interactive
             responsive websites.Quickly adaptable and well-organized.I'm a full
