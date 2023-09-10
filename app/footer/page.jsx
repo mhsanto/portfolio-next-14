@@ -2,12 +2,12 @@ import Image from "next/image";
 import styles from "./style.module.scss";
 import RoundedButton from "@/components/RoundedButton";
 const Footer = async () => {
-  // https://api.quotable.io/random/?tags=technology,famous-quotes
+
 
   const getData = async () => {
     try {
       const res = await fetch("https://api.quotable.io/random/", {
-        cache: "force-cache",
+        next:{revalidate:30}
       });
       if (!res.ok) {
         throw new Error("something went wrong");

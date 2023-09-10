@@ -5,4 +5,8 @@
     color: white;
     border-radius: 50%;
     cursor: pointer;
+    transition: .2s linear;
+    &:hover{
+      opacity: 0.9;
+    }
   }
