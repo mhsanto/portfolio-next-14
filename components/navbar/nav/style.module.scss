@@ -23,8 +23,8 @@
     .nav {
       display: flex;
       flex-direction: column;
-      font-size: clamp(2rem, calc(2rem + 0.35vw), 2.7rem);
-      gap: 12px;
+      font-size: clamp(2rem, calc(3rem + 0.35vw), 3rem);
+      gap: 1rem;
       margin-top: 80px;
       @media (max-width: 480px) {
         gap: 30px;

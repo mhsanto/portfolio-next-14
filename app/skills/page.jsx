@@ -31,7 +31,7 @@ const projects = [
   },
   {
     title: "MONGODB && PRISMA && MONGOOSE",
-    color: "#123B51",
+    color: "#4682B4",
   },
   {
     title: "BOOTSTRAP.5 && TAILWIND && MUI",

@@ -1,12 +1,15 @@
 .button {
-    width: 7rem;
-    height: 7rem;
-    background: rgb(14,14,14);
-    color: white;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: .2s linear;
-    &:hover{
-      opacity: 0.9;
-    }
+  width: 8.5rem;
+  height: 8.5rem;
+
+  color: white;
+  background: #000;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s linear;
+  &:hover {
+    opacity: 0.9;
   }
+}

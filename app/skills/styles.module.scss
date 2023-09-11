@@ -16,18 +16,16 @@
   border-top: 1px solid black;
   cursor: pointer;
   position: relative;
-  margin-bottom: -2vw;
-
-  background-color: white;
+  margin-bottom: -2.5vw;
   @media (max-width: 480px) {
     // margin-bottom: -3vw;
     padding: 1rem 0;
   }
-}
+} 
 
 .projectContainer div p {
   margin: 0px;
-  font-size: clamp(1.56rem, calc(0.58rem + 4.59vw), 3.3rem);
+  font-size:  clamp(1.56rem, 0.58rem + 4.59vw, 4.5rem);
   padding-left: 10px;
   text-transform: uppercase;
   pointer-events: none;

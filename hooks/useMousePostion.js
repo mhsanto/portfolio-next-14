@@ -6,7 +6,7 @@ const useMousePosition = () => {
   
     const updatePosition = (e) => {
       if (e.type === "mousemove" || e.type === "touchmove") {
-        setPosition({ x: e.clientX || e.touches[0].clientX, y: e.clientY || e.touches[0].clientY });
+        setPosition({ x: e.clientX || e?.touches[0]?.clientX, y: e.clientY || e?.touches[0]?.clientY });
       }
     };
   

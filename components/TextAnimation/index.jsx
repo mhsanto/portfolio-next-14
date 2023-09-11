@@ -1,0 +1,120 @@
+"use client";
+import React, { useEffect, useState } from "react";
+import styles from "./styles.module.scss";
+import { motion } from "framer-motion";
+import "./styles.module.scss";
+const banner = {
+  animate: {
+    transition: {
+      delayChildren: 0.01,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const letterAni = {
+  initial: { y: 400 },
+  animate: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1,
+    },
+  },
+};
+const TextAnimation = () => {
+  const [playMarquee, setPlayMarquee] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPlayMarquee(true);
+    }, 1);
+  }, []);
+  return (
+    <div className={styles.animation}>
+      <motion.div className={styles.banner} variants={banner}>
+        <div className={styles.something}>
+          <BannerRowTop title={"Frontend"} />
+          <div className={styles.marquee_style}>
+            <BannerRowCenter title={"JAVASCRIPT"} playMarquee={playMarquee} />
+          </div>
+          <BannerRowTop title={"Developer"} />
+        </div>
+
+        <div className={styles.flex}>
+          <BannerRowBottom title={"Mahmodul"} />
+          <BannerRowBottom title={"Hasan"} />
+          <BannerRowBottom title={"Santo"} />
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+const AnimatedLetters = ({ title, disabled }) => (
+  <motion.span
+    className={styles.row_title}
+    variants={disabled ? null : banner}
+    initial="initial"
+    animate="animate"
+  >
+    {[...title].map((letter) => (
+      <motion.span
+        className={styles.row_letter}
+        variants={disabled ? null : letterAni}
+      >
+        {letter}
+      </motion.span>
+    ))}
+  </motion.span>
+);
+const BannerRowTop = ({ title }) => {
+  return (
+    <div className={styles.banner_row}>
+      <div className={styles.row_col}>
+        <AnimatedLetters title={title} />
+      </div>
+    </div>
+  );
+};
+const BannerRowBottom = ({ title }) => {
+  return (
+    <div className={styles.banner_row}>
+      <AnimatedLetters title={title} />
+    </div>
+  );
+};
+
+const BannerRowCenter = ({ title, playMarquee }) => {
+  return (
+    <div
+      className={`${styles.banner_row} ${styles.marquee}  ${
+        playMarquee && `${styles.animate}`
+      }`}
+    >
+      <motion.div
+        initial={{ y: 310 }}
+        animate={{ y: 0 }}
+        transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
+        className={styles.marquee__inner}
+        style={{ display: "flex", gap: "2rem" }}
+      >
+        <AnimatedLetters title={(title = "JAVASCRIPT")} />
+        <AnimatedLetters title={(title = "REACT")} />
+        <AnimatedLetters title={(title = "NEXT")} />
+        <AnimatedLetters title={(title = "JAVASCRIPT")} />
+        <AnimatedLetters title={(title = "REACT")} />
+        <AnimatedLetters title={(title = "NEXT")} />
+
+        <AnimatedLetters title={(title = "JAVASCRIPT")} disabled />
+        <AnimatedLetters title={(title = "REACT")} disabled />
+        <AnimatedLetters title={(title = "NEXT")} disabled />
+
+        <AnimatedLetters title={(title = "JAVASCRIPT")} disabled />
+        <AnimatedLetters title={(title = "REACT")} disabled />
+        <AnimatedLetters title={(title = "NEXT")} disabled />
+      </motion.div>
+    </div>
+  );
+};
+
+export default TextAnimation;

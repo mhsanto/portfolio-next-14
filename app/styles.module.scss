@@ -1,3 +1,6 @@
+.main {
+  min-height: 100vh;
+}
 .header {
   position: relative;
   .logo {
@@ -6,21 +9,19 @@
     letter-spacing: -15px;
     padding-left: 3rem;
     padding-top: 1rem;
-    @media (max-width:480px) {
-        font-size: 2.5rem;
-        letter-spacing: -11px;
-        padding-left: 0rem;
-        padding-top: 0rem;
-    
+    @media (max-width: 480px) {
+      font-size: 2.5rem;
+      letter-spacing: -11px;
+      padding-left: 0rem;
+      padding-top: 0rem;
     }
     a {
       text-decoration: none;
       color: black;
     }
   }
-
 }
-.connect{
+.connect {
   position: absolute;
   left: 50%;
   font-weight: 500;
@@ -33,32 +34,22 @@
 }
 
 .hero {
-  height: 70vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  text-align: start;
-  max-height: 100vh;
-  width: 100vw;
- 
-  p {
-    max-width: 100%;
-    overflow: hidden;
-    font-size: clamp(3.00rem, calc(2.16rem + 4.19vw), 7.19rem);
-    font-weight: bold;
-    &:first-child {
-      padding-left: 11px;
-      letter-spacing: 8px;
-    }
-    &:nth-child(2) {
-      margin-top: -3rem;
-    }
+  align-items: self-start;
+  height: 100vh;
+  flex-direction: column;
+  h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -2px;
   }
-  span {
+  .headerTwo {
     font-size: 2rem;
-    font-weight: 500;
+    text-align: center;
+  }
+  .headerOne {
+    font-size: 4rem;
   }
 }
+
