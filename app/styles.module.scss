@@ -27,9 +27,11 @@
   font-weight: 500;
   font-size: 1.2rem;
   top: 25%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(47px);
   display: flex;
   gap: 5px;
+  text-transform: uppercase;
+  justify-content: center;
   align-items: center;
 }
 

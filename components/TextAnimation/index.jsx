@@ -28,7 +28,7 @@ const TextAnimation = () => {
   useEffect(() => {
     setTimeout(() => {
       setPlayMarquee(true);
-    }, 1);
+    }, 2);
   }, []);
   return (
     <div className={styles.animation}>
@@ -42,9 +42,9 @@ const TextAnimation = () => {
         </div>
 
         <div className={styles.flex}>
-          <BannerRowBottom title={"Mahmodul"} />
+          {/* <BannerRowBottom title={"Mahmodul"} />
           <BannerRowBottom title={"Hasan"} />
-          <BannerRowBottom title={"Santo"} />
+          <BannerRowBottom title={"Santo"} /> */}
         </div>
       </motion.div>
     </div>
@@ -94,24 +94,23 @@ const BannerRowCenter = ({ title, playMarquee }) => {
       <motion.div
         initial={{ y: 310 }}
         animate={{ y: 0 }}
-        transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
+        transition={{ duration: 5 }}
         className={styles.marquee__inner}
-        style={{ display: "flex", gap: "2rem" }}
       >
-        <AnimatedLetters title={(title = "JAVASCRIPT")} />
+        {/* <AnimatedLetters title={(title = "JAVASCRIPT")} />
         <AnimatedLetters title={(title = "REACT")} />
-        <AnimatedLetters title={(title = "NEXT")} />
-        <AnimatedLetters title={(title = "JAVASCRIPT")} />
-        <AnimatedLetters title={(title = "REACT")} />
-        <AnimatedLetters title={(title = "NEXT")} />
+        <AnimatedLetters title={(title = "NEXT")} /> */}
 
-        <AnimatedLetters title={(title = "JAVASCRIPT")} disabled />
-        <AnimatedLetters title={(title = "REACT")} disabled />
-        <AnimatedLetters title={(title = "NEXT")} disabled />
+        <AnimatedLetters title={"JAVASCRIPT"} />
+        <AnimatedLetters title={"REACT"} />
+        <AnimatedLetters title={"NEXT13"} />
+        <AnimatedLetters title={"TAILWIND"} disabled/>
+        <AnimatedLetters title={"REDUX-TOOLKIT"} disabled/>
+        <AnimatedLetters title={"NODE"} disabled/>
+        <AnimatedLetters title={"MONGODB"} disabled/>
+        <AnimatedLetters title={"PRISMA"} disabled/>
+        <AnimatedLetters title={"ETC.."} disabled/>
 
-        <AnimatedLetters title={(title = "JAVASCRIPT")} disabled />
-        <AnimatedLetters title={(title = "REACT")} disabled />
-        <AnimatedLetters title={(title = "NEXT")} disabled />
       </motion.div>
     </div>
   );

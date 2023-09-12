@@ -44,15 +44,15 @@ export default function Home() {
         {/* </div> */}
 
         <div className={styles.connect}>
-          {" "}
+        
           <span>Let's Connect </span>
           <Link href="https://www.linkedin.com/in/mh-santo/" target="_blank">
-            {" "}
+        
             <Image
               className="linkedin"
               src={LinkedinImage}
-              height={30}
-              width={30}
+              height={25}
+              width={25}
               alt="linkedin Logo"
             />
           </Link>

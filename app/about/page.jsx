@@ -5,9 +5,7 @@ import { motion } from "framer-motion";
 import useMousePosition from "@/hooks/useMousePostion";
 import FramerAnimation from "@/components/FramerAnimation";
 
-export const metadata = {
-  title: "about",
-};
+
 export default  function About() {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();

@@ -42,12 +42,12 @@ const projects = [
     color: "#FCCA3F",
   },
   {
-    title: "GIT && GITHUB",
+    title: "GIT && GITHUB && ILLUSTRATOR",
     color: "#F05030",
   },
 
   {
-    title: " REACT=>FORM,QUERY,REDUX",
+    title: " REACT=>FORM,QUERY,REDUX,EMAIL",
     color: "#91F018",
   },
 ];
