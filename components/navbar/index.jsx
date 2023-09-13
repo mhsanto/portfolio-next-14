@@ -16,9 +16,9 @@ export default function Home() {
 
   return (
     <>
-        <div className={styles.main}>
-          <div className={styles.header}>
-      <Magnet>
+      <div className={styles.main}>
+        <div className={styles.header}>
+          <Magnet>
             <div
               onClick={() => {
                 setIsActive(!isActive);
@@ -31,9 +31,9 @@ export default function Home() {
                 }`}
               ></div>
             </div>
-      </Magnet>
-          </div>
+          </Magnet>
         </div>
+      </div>
       <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
     </>
   );

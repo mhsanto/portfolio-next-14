@@ -12,6 +12,7 @@ $layout-breakpoint-xsmall: 480px;
   height: 100vh;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .banner {
   z-index: 20;
@@ -37,9 +38,6 @@ $layout-breakpoint-xsmall: 480px;
   display: flex;
   gap: 1rem;
   justify-content: center;
-  @media (max-width: 780px) {
-    flex-wrap: wrap;
-  }
 }
 
 $move-initial: calc(70%);
@@ -56,12 +54,12 @@ $move-final: calc(-70%);
     display: flex;
     position: relative;
     transform: translate3d($move-initial, 0, 0);
-    animation: marquee 15s linear infinite;
+    animation: marquee 25s linear infinite;
     animation-play-state: paused;
     @media (min-width: $layout-breakpoint-large) {
       transform: translate3d(calc(-25% + 10vw), 0, 0);
       animation: marquee-lg 5s linear infinite;
-      animation-play-state: running;
+      animation-play-state: paused;
     }
   }
   .row_title {
@@ -100,4 +98,24 @@ $move-final: calc(-70%);
   background: #000;
   color: white;
 
+}
+
+.banner {
+  z-index: 20;
+  position: relative;
+  .banner_header {
+    overflow-y: hidden;
+    display:flex;
+    align-items: center;
+
+    .row_title,
+    .row_letter {
+      font-size: clamp(1.2rem, calc(0.31rem + 2vw), 2rem);
+      text-transform: uppercase;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      white-space: nowrap;
+    }
+  }
 }

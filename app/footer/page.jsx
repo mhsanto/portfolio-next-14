@@ -34,7 +34,7 @@ const Footer = async () => {
           />
           <h1>
             Have A Project? <span>or</span> <br />
-            Let's work together.
+ 
           </h1>
         </div>
         <div>

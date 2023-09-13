@@ -5,8 +5,7 @@ import { motion } from "framer-motion";
 import useMousePosition from "@/hooks/useMousePostion";
 import FramerAnimation from "@/components/FramerAnimation";
 
-
-export default  function About() {
+export default function About() {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
   const size = isHovered ? 400 : 40;
@@ -40,9 +39,28 @@ export default  function About() {
               setIsHovered(false);
             }}
           >
-            Eager to quickly become knowledgeable about the newest software and
-            web technologies. Able to perform successfully both alone and in
-            teams. ( Not sure about this one.)
+            When I'm not building or exploring new web experiences, I'm probably
+            watching animes or playing games.I was a big wrestling fan.Used to
+            be a gamer but now just a developer. Web development this shit is
+            hard but  I'm doing my best to get better every day.
+          </motion.p>
+          <motion.p
+            initial="initial"
+            animate="animate"
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+            }}
+            onTouchStart={() => {
+              setIsHovered(true);
+            }}
+            onTouchEnd={() => {
+              setIsHovered(false);
+            }}
+          >
+            If you're tired of starting over, stop giving up
           </motion.p>
         </motion.div>
 
@@ -50,11 +68,17 @@ export default  function About() {
           <motion.p initial="initial" animate="animate">
             I'm <span>Mahmodul Hasan Santo</span> a{" "}
             <span>Frontend Web Developer</span> that creates interactive
-            responsive websites.Quickly adaptable and well-organized.I'm a full
-            stack engineer on the route to becoming one.
+            responsive websites.Quickly adaptable and well-organized. Able to
+            perform successfully both alone and in teams. I'm a full stack
+            engineer on the route to becoming one.
+          </motion.p>
+
+          <motion.p initial="initial" animate="animate">
+            My Philosophy is simple
           </motion.p>
         </div>
       </main>
     </>
   );
 }
+//

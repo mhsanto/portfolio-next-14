@@ -47,7 +47,7 @@ const projects = [
   },
 
   {
-    title: " REACT=>FORM,QUERY,REDUX,EMAIL",
+    title: " REACT=> FORM, QUERY, REDUX,EMAIL",
     color: "#91F018",
   },
 ];

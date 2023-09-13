@@ -1,9 +1,11 @@
 .container {
   display: flex;
   height: 100vh;
+
   align-items: center;
   @media (max-width: 480px) {
     align-items: normal;
+    padding-top: 6rem;
   }
 }
 
@@ -13,17 +15,21 @@
 }
 
 .projectContainer div {
+  background-color: white;
+  z-index: 20;
   border-top: 1px solid black;
   cursor: pointer;
   position: relative;
   margin-bottom: -2.5vw;
   @media (max-width: 480px) {
-    // margin-bottom: -3vw;
-    padding: 1rem 0;
+    margin-bottom: -5vw;
+    font-weight: 500;
+    padding: 10px 0;
   }
 } 
 
 .projectContainer div p {
+
   margin: 0px;
   font-size:  clamp(1.56rem, 0.58rem + 4.59vw, 4.5rem);
   padding-left: 10px;

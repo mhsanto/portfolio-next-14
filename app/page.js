@@ -58,31 +58,7 @@ export default function Home() {
           </Link>
         </div>
       </header>
-      {/* <div className={styles.hero}>
-        <Image src="/photos/my.webp" width={200} height={150} alt="my image" />
-        <div ref={body} style={{ overflow: "hidden" }}>
-          <motion.h2
-            className={styles.headerTwo}
-            variants={animate}
-            initial="initial"
-            animate={isInView ? "open" : ""}
-          >
-            MAHMODUL Hasan Santo
-          </motion.h2>
-        </div>
-
-        <div ref={body} style={{ overflow: "hidden" }}>
-          <motion.h2
-            className={styles.headerOne}
-            variants={animate}
-            initial="initial"
-            animate={isInView ? "open" : ""}
-          >
-            Frontend-WEB-DEVELOPER
-          </motion.h2>
-        </div>
-      </div> */}
-
+    
      <TextAnimation/>
     </main>
   );
