@@ -6,7 +6,7 @@ import "./styles.module.scss";
 const banner = {
   animate: {
     transition: {
-      delayChildren: 0.01,
+      delayChildren: 2.3,
       staggerChildren: 0.15,
     },
   },

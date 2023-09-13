@@ -9,7 +9,7 @@ import Footer from "./footer/index";
 
 const navItems = [
   {
-    title: "Home",
+    title: "HOME",
     href: "/",
   },
   {

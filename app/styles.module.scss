@@ -33,6 +33,12 @@
   text-transform: uppercase;
   justify-content: center;
   align-items: center;
+@media (max-width:480px) {
+  font-size: 14px;
+  left: 46%;
+  transform: translateX(-50%) translateY(67px);
+  
+}
 }
 
 .hero {

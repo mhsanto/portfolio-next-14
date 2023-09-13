@@ -2,15 +2,14 @@
 import React, { useEffect, useState } from "react";
 import styles from "./style.module.scss";
 import { motion } from "framer-motion";
-import { slideUp ,opacity} from "./anim";
+import { slideUp, opacity } from "./anim";
 
-const Loader = ({words}) => {
+const Loader = ({ words }) => {
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
   useEffect(() => {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
   }, []);
- 
 
   useEffect(() => {
     if (index == words.length - 1) return;
@@ -18,7 +17,7 @@ const Loader = ({words}) => {
       () => {
         setIndex(index + 1);
       },
-      index == 0 ? 800 : 150
+      index == 0  ? 800 : 150
     );
   }, [index]);
   const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
@@ -46,12 +45,10 @@ const Loader = ({words}) => {
       initial="initial"
       exit="exit"
       className={styles.introduction}
-   
     >
       {dimension.width > 0 && (
         <>
-          <motion.p variants={opacity} initial="initial" animate="enter" >
-        
+          <motion.p variants={opacity} initial="initial" animate="enter">
             {words[index]}
           </motion.p>
           <svg>
