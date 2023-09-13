@@ -74,7 +74,7 @@ export default function About() {
           </motion.p>
 
           <motion.p initial="initial" animate="animate">
-            My Philosophy is simple
+            My Motto is simple...
           </motion.p>
         </div>
       </main>

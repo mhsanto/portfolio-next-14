@@ -33,11 +33,7 @@ header .header-items .header-item,
 .logo {
   padding: 1em 2em;
 }
-a {
-  text-decoration: none;
 
-  text-transform: uppercase;
-}
 .slide-in {
   position: absolute;
   top: 0;

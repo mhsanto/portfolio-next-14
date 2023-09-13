@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import FramerAnimation from "@/components/FramerAnimation";
 import { inView, useInView, motion } from "framer-motion";
-import {  useRef } from "react";
+import { useRef } from "react";
+import { BiLogoLinkedin } from "react-icons/bi";
 import TextAnimation from "@/components/TextAnimation";
 const words = [
   "FRONTEND DEVELOPER",
@@ -33,7 +34,6 @@ export default function Home() {
     open: { y: "0%", transition: { duration: 1.5 } },
   };
 
-
   return (
     <main className={styles.main}>
       {/* <FramerAnimation words={words} /> */}
@@ -44,22 +44,14 @@ export default function Home() {
         {/* </div> */}
 
         <div className={styles.connect}>
-        
           <span>Let's Connect </span>
           <Link href="https://www.linkedin.com/in/mh-santo/" target="_blank">
-        
-            <Image
-              className="linkedin"
-              src={LinkedinImage}
-              height={25}
-              width={25}
-              alt="linkedin Logo"
-            />
+            <BiLogoLinkedin size={30} />
           </Link>
         </div>
       </header>
-    
-     <TextAnimation/>
+
+      <TextAnimation />
     </main>
   );
 }

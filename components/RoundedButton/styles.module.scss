@@ -9,6 +9,9 @@
   border-radius: 50%;
   cursor: pointer;
   transition: 0.2s linear;
+  @media (max-width:900px) {
+    display: none;
+  }
   &:hover {
     opacity: 0.9;
   }

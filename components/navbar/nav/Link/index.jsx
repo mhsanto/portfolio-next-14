@@ -24,11 +24,7 @@ export default function Index({ data, isActive, setSelectedIndicator }) {
         animate={isActive ? "open" : "closed"}
         className={styles.indicator}
       ></motion.div>
-
-      <Magnet>
-     
-        <Link href={href}>{title}</Link>
-      </Magnet>
+      <Link href={href}>{title}</Link>
     </motion.div>
   );
 }
