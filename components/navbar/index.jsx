@@ -18,20 +18,18 @@ export default function Home() {
     <>
       <div className={styles.main}>
         <div className={styles.header}>
-          <Magnet>
+          <div
+            onClick={() => {
+              setIsActive(!isActive);
+            }}
+            className={styles.button}
+          >
             <div
-              onClick={() => {
-                setIsActive(!isActive);
-              }}
-              className={styles.button}
-            >
-              <div
-                className={`${styles.burger} ${
-                  isActive ? styles.burgerActive : ""
-                }`}
-              ></div>
-            </div>
-          </Magnet>
+              className={`${styles.burger} ${
+                isActive ? styles.burgerActive : ""
+              }`}
+            ></div>
+          </div>
         </div>
       </div>
       <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>

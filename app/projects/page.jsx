@@ -21,12 +21,12 @@ const projects = [
     href: "https://clone-netflix-clone.netlify.app",
   },
   {
-    title: "Bootstrap E-Commerce",
-    tech: "HTML,CSS,BOOTSTRAP-5",
-    src: "bootstrap.webp",
+    title: "My First Locomotive Portfolio",
+    tech: "React,GSAP,Styled-Components,Framer-Motion",
+    src: "porfolio.png",
     color: "#EFE8D3",
 
-    href: "https://mhsanto.github.io/Bootstarp-E-commerce-website/",
+    href: "https://mhsantoportfolio.netlify.app/",
   },
 
   {
