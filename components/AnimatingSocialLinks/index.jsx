@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect } from "react";
-import Image from "next/image";
 import "./styles.css";
 import {
   BsGithub,
@@ -16,25 +15,25 @@ const socials = [
     name: "Git",
     nameTwo: "hub",
     icon: <BsGithub />,
-    href: "",
+    href: "https://github.com/mhsanto",
   },
   {
     name: "Link",
     nameTwo: "edIn",
     icon: <BsLinkedin />,
-    href: "",
+    href: "https://www.linkedin.com/in/mh-santo/",
   },
   {
     name: "Face",
     nameTwo: "book",
     icon: <BsFacebook />,
-    href: "",
+    href: "https://www.facebook.com/mhsanto072",
   },
   {
     name: "Insta",
     nameTwo: "gram",
     icon: <BsInstagram />,
-    href: "",
+    href: "https://www.instagram.com/direct/t/119904386064127",
   },
   {
     name: "santomh27",
@@ -109,13 +108,13 @@ const AnimatingSocialLinks = () => {
     <div>
       <div className="container">
         {socials.map((social, i) => (
-          <div className="item item-1" key={i}>
-            <div className="word w1">
-              <Link href={social.href}>{social.name} </Link>
+          <Link href={social.href} target="_blank">
+            <div className="item item-1" key={i}>
+              <div className="word w1">{social.name} </div>
+              <div className="img">{social.icon}</div>
+              <div className="word w2">{social.nameTwo} </div>
             </div>
-            <div className="img">{social.icon}</div>
-            <div className="word w2">{social.nameTwo}</div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
