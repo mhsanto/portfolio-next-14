@@ -4,7 +4,10 @@
   min-height: 100vh;
   height: 100vh;
   padding-top: 3rem;
+  @media (max-width: 480px) {
+    padding-top: 4rem;
 
+  }
   .quote {
     border-top: 2px solid;
     border-bottom: 2px solid;

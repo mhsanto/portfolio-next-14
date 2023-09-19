@@ -14,13 +14,11 @@
   cursor: pointer;
   transition: all 0.4s ease-in-out;
   text-transform: uppercase;
-  @media (max-width: 480px) {
-    text-transform:none;
-  }
+
 }
 
 .item:nth-child(1) {
-  border-top: 2px solid #000;
+  /* border-top: 2px solid #000; */
 }
 
 .img {

@@ -91,16 +91,18 @@ const AnimatingSocialLinks = () => {
       }, intervalDuration);
     }
 
-    // Attach event listeners to elements with the 'item' class
+    // Attach event listeners to elements with the 'item' class for both mouse and touch events
     const items = document.querySelectorAll(".item");
     items.forEach((item) => {
       item.addEventListener("mouseenter", shuffleAnimation);
+      item.addEventListener("touchstart", shuffleAnimation); // Add touchstart event
     });
 
     // Remove event listeners when the component unmounts
     return () => {
       items.forEach((item) => {
         item.removeEventListener("mouseenter", shuffleAnimation);
+        item.removeEventListener("touchstart", shuffleAnimation); // Remove touchstart event
       });
     };
   }, []);
@@ -108,8 +110,8 @@ const AnimatingSocialLinks = () => {
     <div>
       <div className="container">
         {socials.map((social, i) => (
-          <Link href={social.href} target="_blank">
-            <div className="item item-1" key={i}>
+          <Link href={social.href} target="_blank" key={i}>
+            <div className="item item-1">
               <div className="word w1">{social.name} </div>
               <div className="img">{social.icon}</div>
               <div className="word w2">{social.nameTwo} </div>
