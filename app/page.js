@@ -1,9 +1,8 @@
-
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import FramerAnimation from "@/components/FramerAnimation";
 import { BiLogoLinkedin } from "react-icons/bi";
-import TextAnimation from "@/components/TextAnimation";
+import HomeText from "../components/Home/Home";
 const words = [
   "FRONTEND DEVELOPER",
   "WEB DESIGNER",
@@ -20,7 +19,6 @@ const words = [
   "TYPESCRIPT",
 ];
 export default function Home() {
-
   return (
     <main className={styles.main}>
       <FramerAnimation words={words} />
@@ -33,7 +31,7 @@ export default function Home() {
         </div>
       </header>
 
-      <TextAnimation />
+      <HomeText />
     </main>
   );
 }

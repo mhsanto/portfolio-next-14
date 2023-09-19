@@ -30,7 +30,7 @@
   p {
     display: flex;
     color: white;
-    font-size: 42px;
+    font-size:  clamp(2.81rem, calc(1.76rem + 5.27vw), 6.50rem);
     align-items: center;
     text-align: center;
     position: absolute;

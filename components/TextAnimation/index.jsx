@@ -51,12 +51,12 @@ const TextAnimation = () => {
             <BannerHeader title={"portfolio"} />
           </div> */}
 
-          <BannerRowTop title={"Frontend"} />
+          {/* <BannerRowTop title={"Frontend"} /> */}
 
           <div className={styles.marquee_style}>
             <BannerRowCenter title={"JAVASCRIPT"} playMarquee={playMarquee} />
           </div>
-          <BannerRowTop title={"Developer"} />
+          {/* <BannerRowTop title={"Developer"} /> */}
         </div>
 
         {/* <div className={styles.flex}>

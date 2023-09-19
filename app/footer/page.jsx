@@ -13,7 +13,7 @@ const Footer = async () => {
         cache: "no-cache",
       });
       if (!res.ok) {
-        throw new Error("something went wrong");
+       console.error("something went wrong");
       }
 
       return await res.json();
