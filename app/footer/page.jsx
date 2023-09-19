@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./style.module.scss";
 import RoundedButton from "@/components/RoundedButton";
-import Link from "next/link";
 
 import AnimatingSocialLinks from "@/components/AnimatingSocialLinks";
 import FramerAnimation from "@/components/FramerAnimation";
