@@ -83,9 +83,9 @@ const Home = () => {
               className="eye-outer"
               cx="400"
               cy="500"
-              r="150"
+              r="120"
               stroke="#0f0f0f" // Set the stroke color
-              strokeWidth={0.4} // Set the stroke width
+              strokeWidth={1} // Set the stroke width
               fill="#fff"
             />
             <circle
@@ -107,23 +107,23 @@ const Home = () => {
           <g id="right-eye">
             <circle
               className="eye-outer"
-              cx="700"
+              cx="630"
               cy="500"
-              r="150"
+              r="120"
               stroke="#0f0f0f" // Set the stroke color
-              strokeWidth={0.4} // Set the stroke width
+              strokeWidth={1} // Set the stroke width
               fill="#fff"
             />
             <circle
               className="eye-outer"
-              cx="700"
+              cx="630"
               cy="500"
               r="90"
               fill="#0f0f0f"
             />
             <circle
               className="eye-inner"
-              cx="780"
+              cx="700"
               cy="500"
               r="15"
               fill="#fff"
@@ -132,13 +132,13 @@ const Home = () => {
         </svg>
         <div className="container">
           <div className="dis_flex">
-            <h3 className="text">Frontend</h3>
+            <p className="text">Frontend</p>
           </div>
           <div className="dis_flex">
-            <h3 className="text"></h3>
+            <p className="text"></p>
           </div>
           <div className="dis_flex">
-            <h3 className="text">Developer</h3>
+            <p className="text">Developer</p>
           </div>
         </div>
       </div>

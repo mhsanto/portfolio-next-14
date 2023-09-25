@@ -7,8 +7,8 @@ import FramerAnimation from "@/components/FramerAnimation";
 
 const projects = [
   {
-    title: `Restaurant Site `,
-    src: "restaurant.webp",
+    title: `Santo-s_Store `,
+    src: "santo_store.PNG",
     tech: "REACT,RTK,FIREBASE,REACT-FORM",
     color: "#000000",
     href: "https://santo-react-restaurant.netlify.app/",

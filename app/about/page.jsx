@@ -40,9 +40,9 @@ export default function About() {
             }}
           >
             When I'm not building or exploring new web experiences, I'm probably
-            watching animes or playing games.I was a big wrestling fan.Used to
-            be a gamer but now just a developer. Web development this shit is
-            hard but  I'm doing my best to get better every day.
+            watching animes or playing games.I'm not a sport's fan, used to be a
+            hardcore WWE fan.Used to play lots of videos games but now just a developer. Web
+            development hard but I'm doing my best to get better every day.
           </motion.p>
           <motion.p
             initial="initial"
@@ -67,10 +67,10 @@ export default function About() {
         <div className={styles.body}>
           <motion.p initial="initial" animate="animate">
             I'm <span>Mahmodul Hasan Santo</span> a{" "}
-            <span>Frontend Web Developer</span> that creates interactive
-            responsive websites.Quickly adaptable and well-organized. Able to
-            perform successfully both alone and in teams. I'm a full stack
-            engineer on the route to becoming one.
+            <span>Frontend Web Developer</span>.I’ve been learning frontend
+            development for a year and a half. I’ve learned a lot in that time
+            and now I want to see how far I’ve come. Able to perform
+            successfully both alone and in teams. My long-term objective is to work as a senior full-stack developer.
           </motion.p>
 
           <motion.p initial="initial" animate="animate">

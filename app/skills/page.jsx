@@ -2,6 +2,7 @@
 import FramerAnimation from "@/components/FramerAnimation";
 import styles from "./styles.module.scss";
 import gsap from "gsap";
+import { useEffect, useRef } from "react";
 
 const projects = [
   {
@@ -19,22 +20,26 @@ const projects = [
       "linear-gradient(90deg, rgba(240,220,78,1) 12%, rgba(45,121,199,1) 100%)",
   },
   {
-    title: "REACT && NEXT.13",
+    title: "REACT.18 && NEXT.13",
     color: "#18F0E8",
     background: "rgb(0,216,255)",
     background:
       "linear-gradient(90deg, rgba(0,216,255,1) 37%, rgba(255,255,255,1) 100%)",
   },
   {
-    title: "NODE.JS && EXPRESS.JS",
+    title: "NODE && EXPRESS JS",
     color: "#56A444",
   },
   {
-    title: "MONGODB && PRISMA && MONGOOSE",
+    title: "MONGODB && MONGOOSE",
     color: "#4682B4",
   },
   {
-    title: "BOOTSTRAP.5 && TAILWIND && MUI",
+    title: "PRISMA && ZOD",
+    color: "#4682B4",
+  },
+  {
+    title: "TAILWIND && MUI",
     color: "#16BECB",
   },
   {
@@ -42,22 +47,24 @@ const projects = [
     color: "#FCCA3F",
   },
   {
-    title: "GIT && GITHUB && ILLUSTRATOR",
+    title: "GIT && GITHUB",
     color: "#F05030",
   },
 
   {
-    title: " REACT=> FORM, QUERY, REDUX,EMAIL",
+    title: " REACT:FORM,QUERY,REDUX,EMAIL",
     color: "#91F018",
   },
 ];
 const words = ["MY SKILLS"];
 
-
 export default function Skills() {
+  const elementRefs = useRef([]);
+
   const manageMouseEnter = (e, index) => {
+    const topValue = window.innerWidth <= 480 ? "-5vw" : "-2vw";
     gsap.to(e.target, {
-      top: "-2vw",
+      top: topValue,
       backgroundColor: projects[index].color,
       background: projects[index].background,
       duration: 0.3,
@@ -73,7 +80,36 @@ export default function Skills() {
       delay: 0.1,
     });
   };
+  const handleMouseEnter = (index) => (e) => {
+    manageMouseEnter(e, index);
+  };
 
+  const handleMouseLeave = (index) => (e) => {
+    manageMouseLeave(e, index);
+  };
+  useEffect(() => {
+    // Add an event listener for window resize
+    const handleResize = () => {
+      // Rerun the animation with the updated top value when the window is resized
+      elementRefs.current.forEach((el, index) => {
+        if (el) {
+          const topValue = window.innerWidth <= 480 ? "-5vw" : "-2vw";
+          gsap.to(el, {
+            top: topValue,
+            duration: 0.3,
+          });
+        }
+      });
+    };
+
+    // Attach the event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <FramerAnimation words={words} />
@@ -83,18 +119,11 @@ export default function Skills() {
           {projects.map((project, index) => {
             return (
               <div
-                onMouseEnter={(e) => {
-                  manageMouseEnter(e, index);
-                }}
-                onMouseLeave={(e) => {
-                  manageMouseLeave(e, index);
-                }}
-                onTouchStart={(e) => {
-                  manageMouseEnter(e, index);
-                }}
-                onTouchEnd={(e) => {
-                  manageMouseLeave(e, index);
-                }}
+                ref={(el) => (elementRefs.current[index] = el)}
+                onMouseEnter={handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave(index)}
+                onTouchStart={handleMouseEnter(index)}
+                onTouchEnd={handleMouseLeave(index)}
                 key={index}
               >
                 <p>{project.title}</p>

@@ -14,15 +14,10 @@
   cursor: pointer;
   transition: all 0.4s ease-in-out;
   text-transform: uppercase;
-
-}
-
-.item:nth-child(1) {
-  /* border-top: 2px solid #000; */
+  width: 100vw;
 }
 
 .img {
-  /* background-color: #000; */
   transition: all 1s cubic-bezier(0.075, 0.8, 0.165, 1);
   align-self: center;
   justify-self: center;
@@ -30,11 +25,7 @@
   width: 0;
   transition: 0.5s linear;
 }
-/* img {
-  width: 125px;
-  height: auto;
-  object-fit: cover;
-} */
+
 .item:hover {
   background-color: #000;
   color: white;
