@@ -13,7 +13,7 @@ const projects = [
       "linear-gradient(90deg, rgba(240,99,24,1) 22%, rgba(33,76,229,1) 100%)",
   },
   {
-    title: "JAVASCRIPT &&TYPESCRIPT",
+    title: "JAVASCRIPT && TYPESCRIPT",
     color: "#f0dc4e",
     background: " rgb(240,220,78)",
     background:
@@ -27,7 +27,7 @@ const projects = [
       "linear-gradient(90deg, rgba(0,216,255,1) 37%, rgba(255,255,255,1) 100%)",
   },
   {
-    title: "NODE && EXPRESS JS",
+    title: "NODE && EXPRESS",
     color: "#56A444",
   },
   {
@@ -52,8 +52,12 @@ const projects = [
   },
 
   {
-    title: " REACT:FORM,QUERY,REDUX,EMAIL",
+    title: "REACT:FORM QUERY EMAIL",
     color: "#91F018",
+  },
+  {
+    title: "REDUX && ZUSTAND",
+    color: "gray",
   },
 ];
 const words = ["MY SKILLS"];
