@@ -34,3 +34,11 @@
 .item:hover .img {
   width: fit-content;
 }
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}

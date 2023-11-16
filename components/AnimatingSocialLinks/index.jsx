@@ -5,6 +5,7 @@ import "./styles.css";
 import {
   GithubIcon,
   LinkedinIcon,
+  Copy,
   FacebookIcon,
   InstagramIcon,
   MailboxIcon,
@@ -49,6 +50,7 @@ const socials = [
   //   href: "",
   // },
 ];
+const contacts = ["01969528025", "nicesanto92@gmail.com"];
 
 const AnimatingSocialLinks = () => {
   useEffect(() => {
@@ -107,6 +109,9 @@ const AnimatingSocialLinks = () => {
       });
     };
   }, []);
+  const onCopy = (i) => {
+    navigator.clipboard.writeText(contacts[i]);
+  };
   return (
     <div>
       <div className="container">
@@ -118,6 +123,25 @@ const AnimatingSocialLinks = () => {
               <div className="word w2">{social.nameTwo} </div>
             </div>
           </Link>
+        ))}
+      </div>
+      <div className="contact">
+        {contacts.map((c, i) => (
+          <p
+            key={i}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "5px",
+            }}
+          >
+            {c}{" "}
+            <Copy
+              onClick={() => onCopy(i)}
+              size={15}
+              style={{ cursor: "pointer" }}
+            />
+          </p>
         ))}
       </div>
     </div>

@@ -5,7 +5,6 @@ import RoundedButton from "@/components/RoundedButton";
 import AnimatingSocialLinks from "@/components/AnimatingSocialLinks";
 import FramerAnimation from "@/components/FramerAnimation";
 import { unstable_noStore as noStore } from "next/cache";
-
 const Footer = async () => {
   // noStore()
   const res = await fetch("https://api.quotable.io/random/").then((res) =>
@@ -44,11 +43,12 @@ const Footer = async () => {
               <RoundedButton />
             </div>
           </div>
-          <AnimatingSocialLinks />
+         
+          <AnimatingSocialLinks  />
           <div className={styles.footer}>
             <span>
               &copy; {new Date().getFullYear()} Mahmodul Hasan Santo.All Rights
-              Reserved{" "}
+              Reserved
             </span>
           </div>
         </div>
