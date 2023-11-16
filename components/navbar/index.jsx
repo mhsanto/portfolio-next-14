@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Nav from "./nav";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import Magnet from "../MakeThingsMagnet";
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);

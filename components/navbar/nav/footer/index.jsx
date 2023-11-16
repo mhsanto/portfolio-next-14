@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styles from "./style.module.scss";
-import Magnet from "@/components/MakeThingsMagnet";
 const footerLinks = [
   {
     id: 1,
@@ -24,11 +23,11 @@ export default function index() {
   return (
     <div className={styles.footer}>
       {footerLinks.map(link=>(
-        <Magnet>
+   
         <Link href={link.href} target="_blank">
          {link.text}
         </Link>
-      </Magnet>
+     
       ))}
       
     </div>

@@ -4,32 +4,26 @@ import RoundedButton from "@/components/RoundedButton";
 
 import AnimatingSocialLinks from "@/components/AnimatingSocialLinks";
 import FramerAnimation from "@/components/FramerAnimation";
+import { unstable_noStore as noStore } from "next/cache";
 
 const Footer = async () => {
-  const getData = async () => {
-    try {
-      const res = await fetch("https://api.quotable.io/random/", {
-        cache: "no-cache",
-      });
-      if (!res.ok) {
-       console.error("something went wrong");
-      }
+  // noStore()
+  const res = await fetch("https://api.quotable.io/random/").then((res) =>
+    res.json()
+  );
+  if (!res.ok) {
+    console.error("something went wrong");
+  }
 
-      return await res.json();
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-  const data = await getData();
   const words = ["HIRE ME"];
   return (
     <>
-      <FramerAnimation words={words} />
+      {/* <FramerAnimation words={words} /> */}
 
       <div className={styles.hire}>
         <div className={styles.quote}>
-          <p>❝{data?.content}❞</p>
-          <p>〞{data?.author} 〟</p>
+          <p>❝{res?.content}❞</p>
+          <p>〞{res?.author} 〟</p>
         </div>
         <div className={styles.between}>
           <div className={styles.flexbox}>
@@ -52,11 +46,10 @@ const Footer = async () => {
           </div>
           <AnimatingSocialLinks />
           <div className={styles.footer}>
-            <p>
-              {" "}
-              &copy;Mahmodul Hasan Santo.All Rights Reserved{" "}
-              {new Date().getFullYear()}
-            </p>
+            <span>
+              &copy; {new Date().getFullYear()} Mahmodul Hasan Santo.All Rights
+              Reserved{" "}
+            </span>
           </div>
         </div>
       </div>

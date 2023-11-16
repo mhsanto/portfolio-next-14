@@ -1,19 +1,19 @@
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import FramerAnimation from "@/components/FramerAnimation";
-import { BiLogoLinkedin } from "react-icons/bi";
+import {LinkedinIcon}from "lucide-react"
 import HomeText from "../components/Home/Home";
 const words = [
   "FRONTEND DEVELOPER",
-  "WEB DESIGNER",
+  "JAVASCRIPT",
   "REACT",
   "NEXT 13",
-  "NEXTAUTH",
+  "NEXT-AUTH",
   "PRISMA",
   "NODE",
   "TAILWIND",
-  "MATERIAL UI",
-  "FIREBASE",
+  "MATERIAL-UI",
+  "FIREBASE-FIRESTORE",
   "EXPRESS",
   "MONGODB",
   "TYPESCRIPT",
@@ -21,12 +21,12 @@ const words = [
 export default function Home() {
   return (
     <main className={styles.main}>
-      <FramerAnimation words={words} />
+      {/* <FramerAnimation words={words} /> */}
       <header className={styles.header}>
         <div className={styles.connect}>
           <span>Let's Connect </span>
           <Link href="https://www.linkedin.com/in/mh-santo/" target="_blank">
-            <BiLogoLinkedin size={30} />
+            <LinkedinIcon size={30} />
           </Link>
         </div>
       </header>
