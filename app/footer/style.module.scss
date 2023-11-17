@@ -26,8 +26,8 @@
         text-align: center;
         margin-inline: auto;
         opacity: 0.9;
-        font-size: 1.1rem;
-        font-weight: 500;
+        font-size: rem;
+        font-weight: 400;
         @media (max-width: 640px) {
           font-size: 0.875rem;
           max-width: 80ch;
@@ -49,19 +49,21 @@
     display: flex;
     padding: 0 4rem;
     justify-content: space-between;
-    @media (max-width: 640px) {
-      padding: 0 1rem;
+    @media (max-width:860px) {
+      padding: 1rem 1rem;
+      justify-content: center;
     }
     .image {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.7rem;
       text-transform: uppercase;
       @media (max-width: 640px) {
         flex-direction: column;
       }
       h1 {
-        font-size: clamp(1.50rem, calc(1.20rem + 1.48vw), 2.50rem);;
+        font-size: clamp(1.50rem, calc(1.20rem + 1.3vw), 2.50rem);;
         span {
           background: #000;
           color: white;
@@ -84,11 +86,11 @@
 .footer {
   background: #000;
   color: gray;
-  font-size: 1rem;
   font-weight: 500;
-  padding: 0.5rem 0;
+  padding: 0.7rem 0;
   text-align: center;
-  font-size: 10px;
+  font-size: 11px;
+  text-transform: uppercase;
 }
 
 .between {

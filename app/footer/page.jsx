@@ -4,34 +4,20 @@ import RoundedButton from "@/components/RoundedButton";
 
 import AnimatingSocialLinks from "@/components/AnimatingSocialLinks";
 import FramerAnimation from "@/components/FramerAnimation";
+import Quotes from "./components/Quotes";
+import { Suspense } from "react";
 
 const Footer = async () => {
-  const getData = async () => {
-    try {
-      const res = await fetch("https://api.quotable.io/random/", {
-        cache: "no-cache",
-      });
-      if (!res.ok) {
-       console.error("something went wrong");
-      }
-
-      return await res.json();
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-  const data = await getData();
   const words = ["HIRE ME"];
   return (
     <>
       <FramerAnimation words={words} />
 
-   {data.length > 0 && (   <div className={styles.hire}>
-        <div className={styles.quote}>
-          <p>❝{data?.content}❞</p>
-          <p>〞{data?.author} 〟</p>
-        </div>
-        </div>)}
+      <div className={styles.hire}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Quotes styles={styles} />
+        </Suspense>
+
         <div className={styles.between}>
           <div className={styles.flexbox}>
             <div className={styles.image}>
@@ -55,8 +41,8 @@ const Footer = async () => {
           <div className={styles.footer}>
             <p>
               {" "}
-              &copy;{new Date().getFullYear()}  Mahmodul Hasan Santo.All Rights Reserved{" "}
-              
+              &copy;{new Date().getFullYear()} Mahmodul Hasan Santo.All Rights
+              Reserved{" "}
             </p>
           </div>
         </div>

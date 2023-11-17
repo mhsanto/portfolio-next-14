@@ -1,7 +1,6 @@
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import FramerAnimation from "@/components/FramerAnimation";
-import { BiLogoLinkedin } from "react-icons/bi";
 import {LinkedinIcon}from "lucide-react"
 import HomeText from "../components/Home/Home";
 const words = [
