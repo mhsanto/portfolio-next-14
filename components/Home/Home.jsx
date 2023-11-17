@@ -1,6 +1,5 @@
 "use client";
 import "./style.css";
-// import "./script";
 import useTextElements from "@/hooks/useTextElements";
 import { TweenMax } from "gsap/gsap-core";
 import { useEffect, useRef } from "react";

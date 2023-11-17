@@ -1,50 +1,52 @@
 "use client";
 import React, { useEffect } from "react";
 import "./styles.css";
+
 import {
-  BsGithub,
-  BsLinkedin,
-  BsFacebook,
-  BsInstagram,
-  BsMailbox,
-  BsPhone,
-} from "react-icons/bs";
+  GithubIcon,
+  LinkedinIcon,
+  Copy,
+  FacebookIcon,
+  InstagramIcon,
+  MailboxIcon,
+  Phone,
+} from "lucide-react";
 import Link from "next/link";
 const socials = [
   {
     name: "Git",
     nameTwo: "hub",
-    icon: <BsGithub />,
+    icon: <GithubIcon />,
     href: "https://github.com/mhsanto",
   },
   {
     name: "Link",
     nameTwo: "edIn",
-    icon: <BsLinkedin />,
+    icon: <LinkedinIcon />,
     href: "https://www.linkedin.com/in/mh-santo/",
   },
   {
     name: "Face",
     nameTwo: "book",
-    icon: <BsFacebook />,
+    icon: <FacebookIcon />,
     href: "https://www.facebook.com/mhsanto072",
   },
   {
     name: "Insta",
     nameTwo: "gram",
-    icon: <BsInstagram />,
+    icon: <InstagramIcon />,
     href: "https://www.instagram.com/direct/t/119904386064127",
   },
   {
     name: "santomh27",
     nameTwo: "@gmail.com",
-    icon: <BsMailbox />,
+    icon: <MailboxIcon />,
     href: "",
   },
   {
     name: "+8801969",
     nameTwo: "528025",
-    icon: <BsPhone />,
+    icon: <Phone />,
     href: "",
   },
 ];

@@ -26,11 +26,12 @@ const Footer = async () => {
     <>
       <FramerAnimation words={words} />
 
-      <div className={styles.hire}>
+   {data.length > 0 && (   <div className={styles.hire}>
         <div className={styles.quote}>
           <p>❝{data?.content}❞</p>
           <p>〞{data?.author} 〟</p>
         </div>
+        </div>)}
         <div className={styles.between}>
           <div className={styles.flexbox}>
             <div className={styles.image}>
@@ -54,8 +55,8 @@ const Footer = async () => {
           <div className={styles.footer}>
             <p>
               {" "}
-              &copy;Mahmodul Hasan Santo.All Rights Reserved{" "}
-              {new Date().getFullYear()}
+              &copy;{new Date().getFullYear()}  Mahmodul Hasan Santo.All Rights Reserved{" "}
+              
             </p>
           </div>
         </div>
