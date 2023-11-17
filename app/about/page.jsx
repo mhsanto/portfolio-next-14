@@ -40,9 +40,7 @@ export default function About() {
             }}
           >
             When I'm not creating or exploring new web experiences, I'm probably
-            watching anime or playing video games.I'm not a sports person,used to be a die-hard WWE fan.Every day, I give my all to get better
-            at what I want to be, and that is a fantastic developer. I treat
-            others how I would like to be treated.
+            watching anime or playing video games. I  love the challenge of solving problems with code, and there's nothing more satisfying than seeing lines of code come to life as something real and useful.Exploring new technologies keeps me excited
           </motion.p>
           <motion.p
             initial="initial"
@@ -60,7 +58,7 @@ export default function About() {
               setIsHovered(false);
             }}
           >
-            If you're tired of starting over, stop giving up
+            "Treat others how you would like to be treated."
           </motion.p>
         </motion.div>
 
@@ -75,11 +73,10 @@ export default function About() {
           </motion.p>
 
           <motion.p initial="initial" animate="animate">
-            My Motto is simple...
+            My Motto is...
           </motion.p>
         </div>
       </main>
     </>
   );
 }
-//
