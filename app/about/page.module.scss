@@ -7,6 +7,7 @@
   @media (max-width: 480px) {
     padding-top: 2rem;
   }
+
   .mask,
   .body {
     flex-direction: column;
@@ -22,6 +23,7 @@
     padding: 0 5rem;
     line-height: 60px;
     cursor: default;
+
     @media (max-width: 960px) {
       font-size: 35px;
       padding: 0 2rem;
@@ -30,14 +32,14 @@
     }
     @media (max-width: 480px) {
       font-size: 23px;
-      line-height: 35px;
+      line-height: 37px;
       padding: 0 0.2rem;
-      padding-top: 2rem;
-
+      padding-top: 0;
     }
     p {
       width: 100%;
-      // padding: 40px;
+      line-break: anywhere;
+ 
       @media (max-width: 768px) {
         padding: 5px;
       }

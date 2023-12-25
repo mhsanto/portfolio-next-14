@@ -24,6 +24,7 @@ export default function About() {
           transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
         >
           <motion.p
+            style={{ paddingTop: "3rem" }}
             initial="initial"
             animate="animate"
             onMouseEnter={() => {
@@ -40,7 +41,10 @@ export default function About() {
             }}
           >
             When I'm not creating or exploring new web experiences, I'm probably
-            watching anime or playing video games. I  love the challenge of solving problems with code, and there's nothing more satisfying than seeing lines of code come to life as something real and useful.Exploring new technologies keeps me excited
+            watching anime or playing video games. I love the challenge of
+            solving problems with code, and there's nothing more satisfying than
+            seeing lines of code come to life as something real and
+            useful.Exploring new technologies keeps me excited
           </motion.p>
           <motion.p
             initial="initial"
