@@ -10,19 +10,17 @@ const words = ["MY SKILLS"];
 
 export default function Skills() {
   const elementRefs = useRef([]);
-  const isMobileWidth = useDevicewidth(480)
+  const isMobileWidth = useDevicewidth(480);
   const manageMouseEnter = (e, index) => {
     const topValue = isMobileWidth ? "-5vw" : "-2vw";
     gsap.to(e.target, {
       top: topValue,
-      backgroundColor:
-        isMobileWidth
-          ? mobileProjects[index].color
-          : projects[index].color,
-      background:
-        isMobileWidth
-          ? mobileProjects[index].background
-          : projects[index].background,
+      backgroundColor: isMobileWidth
+        ? mobileProjects[index].color
+        : projects[index].color,
+      background: isMobileWidth
+        ? mobileProjects[index].background
+        : projects[index].background,
       duration: 0.3,
     });
   };
@@ -59,11 +57,16 @@ export default function Skills() {
     };
 
     // Attach the event listener
-    window.addEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      // Client-side-only code
+      window.addEventListener("resize", handleResize);
+    }
 
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener("resize", handleResize);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
     };
   }, []);
   return (
@@ -79,7 +82,6 @@ export default function Skills() {
                     ref={(el) => (elementRefs.current[index] = el)}
                     onMouseEnter={handleMouseEnter(index)}
                     onMouseLeave={handleMouseLeave(index)}
-                   
                     key={index}
                   >
                     <p>{project.title}</p>
