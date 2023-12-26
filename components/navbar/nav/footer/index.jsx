@@ -19,18 +19,28 @@ const footerLinks = [
     href: "https://www.facebook.com/mhsanto072",
     text: "FACEBOOK",
   },
+  {
+    id: 4,
+    href: "/assets/cv.pdf",
+    text: "FACEBOOK",
+  },
 ];
 export default function index() {
   return (
     <div className={styles.footer}>
-      {footerLinks.map(link=>(
-        <Magnet>
-        <Link href={link.href} target="_blank">
-         {link.text}
-        </Link>
-      </Magnet>
+      {footerLinks.map((link) => (
+        <Magnet key={link.id}>
+          {link.id === 4 ? (
+            <Link href={link.href} download={true}>
+              CV
+            </Link>
+          ) : (
+            <Link href={link.href} target="_blank">
+              {link.text}
+            </Link>
+          )}
+        </Magnet>
       ))}
-      
     </div>
   );
 }

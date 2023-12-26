@@ -1,7 +1,7 @@
 .footer{
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: start;
     font-size: 14px;
     gap: 2rem;
     padding-bottom: 1rem;
@@ -9,7 +9,7 @@
       justify-self: flex-start;
     }
   @media (max-width:480px) {
-    font-size:.8rem;
+    font-size:1rem;
     gap: 10px;
     padding-bottom: 3rem;
     padding-left: 0;

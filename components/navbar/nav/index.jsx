@@ -3,9 +3,10 @@ import styles from "./style.module.scss";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { menuSlide } from "../anim";
-import Link from "./Link";
+import NavLinks from "./Link";
 import Curve from "./curve";
 import Footer from "./footer/index";
+import Link from "next/link";
 
 const navItems = [
   {
@@ -50,19 +51,18 @@ export default function index() {
           className={styles.nav}
         >
           <div className={styles.header}>
-            <p>
-         
-            santomh27@gmail.com
-            </p>
+            <Link href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZWPGKjwgXlHFBlZxTdnPMSFBVNRDSqbrZFRXmqxhRGWkKFFffBcDFCnBDCqJLvtXQxVcg" target="_blank">
+              santomh27@gmail.com
+            </Link>
           </div>
           {navItems.map((data, index) => {
             return (
-              <Link
+              <NavLinks
                 key={index}
                 data={{ ...data, index }}
                 isActive={selectedIndicator == data.href}
                 setSelectedIndicator={setSelectedIndicator}
-              ></Link>
+              ></NavLinks>
             );
           })}
         </div>
