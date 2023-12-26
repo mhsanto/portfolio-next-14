@@ -17,6 +17,9 @@
 .projectContainer {
   position: relative;
   width: 100%;
+  @media (max-width: 480px) {
+  padding-top: 3rem;
+  }
 }
 
 .projectContainer div {
@@ -27,26 +30,26 @@
   position: relative;
   margin-bottom: -2.5vw;
   @media (max-width: 480px) {
-    margin-bottom: -6vw;
+    margin-bottom: -5vw;
     font-weight: 500;
-    padding: 10px 0;
+    // padding: 10px 0;
   }
-} 
+}
 
 .projectContainer div p {
   display: flex;
   flex-wrap: wrap;
   margin: 0px;
-  font-size:  clamp(1.56rem, 0.58rem + 3.9vw, 4.5rem);
+  font-size: clamp(1.56rem, 0.58rem + 3.9vw, 4.5rem);
   padding-left: 10px;
   text-transform: uppercase;
   pointer-events: none;
 
-  @media (max-width:640px) {
-  font-size:  clamp(1.5rem, 0.58rem + 5vw, 4.5rem);
+  @media (max-width: 640px) {
+    font-size: clamp(1.5rem, 0.58rem + 5vw, 4.5rem);
   }
-  @media (max-width:480px) {
-    font-size:  clamp(1.8rem, 0.58rem + 4.5vw, 4.5rem);
-    }
-
+  @media (max-width: 480px) {
+    line-break: anywhere;
+    font-size: 2.2rem;
+  }
 }
