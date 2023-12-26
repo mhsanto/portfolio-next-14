@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 
 const useDeviceWidth = (maxWidth) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isWidthExceeded, setIsWidthExceeded] = useState(window.innerWidth <= maxWidth);
+  const isClient = typeof window === 'object';
+
+  const [windowWidth, setWindowWidth] = useState(isClient ? window.innerWidth : 0);
+  const [isWidthExceeded, setIsWidthExceeded] = useState(isClient ? window.innerWidth > maxWidth : false);
 
   const handleResize = () => {
     const newWidth = window.innerWidth;
@@ -11,14 +13,16 @@ const useDeviceWidth = (maxWidth) => {
   };
 
   useEffect(() => {
-    // Attach event listener on mount
-    window.addEventListener('resize', handleResize);
+    if (isClient) {
+      // Attach event listener on mount
+      window.addEventListener('resize', handleResize);
 
-    // Detach event listener on unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [maxWidth]);
+      // Detach event listener on unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, [maxWidth, isClient]);
 
   return isWidthExceeded;
 };

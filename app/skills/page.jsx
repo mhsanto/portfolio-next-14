@@ -58,16 +58,14 @@ export default function Skills() {
 
     // Attach the event listener
     if (typeof window !== "undefined") {
-      // Client-side-only code
+      // Add an event listener for window resize
       window.addEventListener("resize", handleResize);
-    }
 
-    // Cleanup the event listener on component unmount
-    return () => {
-      if (typeof window !== "undefined") {
+      // Cleanup the event listener on component unmount
+      return () => {
         window.removeEventListener("resize", handleResize);
-      }
-    };
+      };
+    }
   }, []);
   return (
     <>
@@ -94,8 +92,6 @@ export default function Skills() {
                     ref={(el) => (elementRefs.current[index] = el)}
                     onMouseEnter={handleMouseEnter(index)}
                     onMouseLeave={handleMouseLeave(index)}
-                    onTouchStart={handleMouseEnter(index)}
-                    onTouchEnd={handleMouseLeave(index)}
                     key={index}
                   >
                     <p>{project.title}</p>
