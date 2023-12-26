@@ -7,6 +7,20 @@ import FramerAnimation from "@/components/FramerAnimation";
 
 const projects = [
   {
+    title: `Admin Dashboard `,
+    src: "project_dashboard.png",
+    tech: "NEXT14,TYPESCRIPT,MONGODB,STRIPE,TAILWIND,ZUSTAND,TANSTACK",
+    color: "#000000",
+    href: "https://fullstack-ecommerce-admin-mhsanto.vercel.app/",
+  },
+  {
+    title: `Fullstack Developer Media `,
+    src: "dev_media.PNG",
+    tech: "NEXT14,MONGODB,TAILWIND,TYPESCRIPT,MONGOOSE",
+    color: "#000000",
+    href: "https://dev-social-media.vercel.app/",
+  },
+  {
     title: `Santo-s_Store `,
     src: "santo_store.PNG",
     tech: "REACT,RTK,FIREBASE,REACT-FORM",
@@ -29,13 +43,13 @@ const projects = [
     href: "https://mhsantoportfolio.netlify.app/",
   },
 
-  {
-    title: "Concept Social Media",
-    tech: "HTML,CSS,VANILLA JS",
-    src: "SocialSite.webp",
-    color: "#706D63",
-    href: "https://mhsanto.github.io/mySocialMedia/",
-  },
+  // {
+  //   title: "Concept Social Media",
+  //   tech: "HTML,CSS,VANILLA JS",
+  //   src: "SocialSite.webp",
+  //   color: "#706D63",
+  //   href: "https://mhsanto.github.io/mySocialMedia/",
+  // },
 ];
 const words = ["MY PROJECTS"];
 export default function Home() {
