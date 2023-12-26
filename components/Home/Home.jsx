@@ -1,6 +1,6 @@
 "use client";
 import "./style.css";
-import useTextElements from "@/hooks/useTextElements";
+import TextAnimation from "./TextAnimation";
 import { TweenMax } from "gsap/gsap-core";
 import { useEffect, useRef } from "react";
 const Home = () => {
@@ -9,6 +9,7 @@ const Home = () => {
   const leftEye = useRef(null);
   const rightEye = useRef(null);
   useEffect(() => {
+    
     const svg = svgRef.current;
     mouse.current = svg.createSVGPoint();
     leftEye.current = createEye("#left-eye");
@@ -72,7 +73,6 @@ const Home = () => {
     };
   }, []);
 
-  useTextElements();
   return (
     <>
       <div className="wrapper">
@@ -129,17 +129,7 @@ const Home = () => {
             />
           </g>
         </svg>
-        <div className="container">
-          <div className="dis_flex">
-            <p className="text">Frontend</p>
-          </div>
-          <div className="dis_flex">
-            <p className="text"></p>
-          </div>
-          <div className="dis_flex">
-            <p className="text">Developer</p>
-          </div>
-        </div>
+       <TextAnimation />
       </div>
     </>
   );

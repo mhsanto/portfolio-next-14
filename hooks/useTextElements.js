@@ -1,34 +1,34 @@
-"use client"
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-function createTextElements() {
-  const elements = document.querySelectorAll(".text");
-  elements.forEach((element) => {
-    const innerText = element.innerText;
-    element.innerHTML = "";
-    const textContainer = document.createElement("div");
-    textContainer.classList.add("block");
-    for (const letter of innerText) {
-      const span = document.createElement("span");
-      span.innerText = letter.trim() === "" ? "\u00A0" : letter;
-      span.classList.add("letter");
-      textContainer.appendChild(span);
-    }
-    element.appendChild(textContainer);
-    element.appendChild(textContainer.cloneNode(true));
-  });
-
-  elements.forEach((element) => {
-    element.addEventListener("mouseover", () => {
-      element.classList.remove("play");
-    });
-  });
-}
-
-function useTextElements() {
+const useTextAnimation = () => {
   useEffect(() => {
-    createTextElements();
-  }, []); // Empty dependency array to run this effect once after the initial render
-}
+    const handleMouseOver = (element) => {
+      element.classList.remove("play");
+    };
 
-export default useTextElements;
+    document.querySelectorAll(".text").forEach((element) => {
+      const innerText = element.innerText;
+      element.innerHTML = "";
+
+      const textContainer = document.createElement("div");
+      textContainer.classList.add("block");
+
+      innerText.split("").forEach((letter) => {
+        const span = document.createElement("span");
+        span.innerText = letter.trim() === "" ? "\xa0" : letter;
+        span.classList.add("letter");
+        textContainer.appendChild(span);
+      });
+
+      element.appendChild(textContainer);
+      element.appendChild(textContainer.cloneNode(true));
+
+      element.addEventListener("mouseover", () => handleMouseOver(element));
+    });
+    
+  }, []); // Empty dependency array to run the effect once on mount
+
+  // If you need to expose any values or functions, you can return them here
+};
+
+export default useTextAnimation;

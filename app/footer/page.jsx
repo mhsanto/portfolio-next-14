@@ -6,6 +6,7 @@ import AnimatingSocialLinks from "@/components/AnimatingSocialLinks";
 import FramerAnimation from "@/components/FramerAnimation";
 import Quotes from "./components/Quotes";
 import { Suspense } from "react";
+import QuotesSkeleton from "./components/QuotesSkeleton";
 
 const Footer = async () => {
   const words = ["HIRE ME"];
@@ -14,7 +15,7 @@ const Footer = async () => {
       <FramerAnimation words={words} />
 
       <div className={styles.hire}>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<QuotesSkeleton />}>
           <Quotes styles={styles} />
         </Suspense>
 

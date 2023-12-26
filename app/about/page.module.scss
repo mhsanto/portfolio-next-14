@@ -38,9 +38,11 @@
     }
     p {
       width: 100%;
-      line-break: anywhere;
- 
+      @media (min-width: 768px) {
+        padding: 0 !important;
+      }
       @media (max-width: 768px) {
+        line-break: anywhere;
         padding: 5px;
       }
     }

@@ -24,7 +24,12 @@ export default function About() {
           transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
         >
           <motion.p
-            style={{ paddingTop: "3rem" }}
+            style={{
+              paddingTop: "3rem", // default padding
+              "@media (max-width: 480px)": {
+                paddingTop: "3rem",
+              },
+            }}
             initial="initial"
             animate="animate"
             onMouseEnter={() => {
