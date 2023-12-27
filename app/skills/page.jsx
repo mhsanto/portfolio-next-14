@@ -2,29 +2,29 @@
 import FramerAnimation from "@/components/FramerAnimation";
 import styles from "./styles.module.scss";
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useDevicewidth from "../../hooks/useDevicewidth";
 import { projects, mobileProjects } from "./datas";
 
 const words = ["MY SKILLS"];
 
 export default function Skills() {
+  const [width, setWidth] = useState(window.innerWidth);
   const elementRefs = useRef([]);
   const isMobileWidth = useDevicewidth(480);
   const manageMouseEnter = (e, index) => {
-    const topValue = isMobileWidth ? "-5vw" : "-2vw";
+    const topValue = isMobileWidth ? "-2vw" : "-5vw";
     gsap.to(e.target, {
       top: topValue,
       backgroundColor: isMobileWidth
-        ? mobileProjects[index].color
-        : projects[index].color,
+        ? projects[index].color
+        : mobileProjects[index].color,
       background: isMobileWidth
-        ? mobileProjects[index].background
-        : projects[index].background,
+        ? projects[index].background
+        : mobileProjects[index].background,
       duration: 0.3,
     });
   };
-
   const manageMouseLeave = (e, index) => {
     gsap.to(e.target, {
       top: "0",
@@ -47,7 +47,7 @@ export default function Skills() {
       // Rerun the animation with the updated top value when the window is resized
       elementRefs.current.forEach((el, index) => {
         if (el) {
-          const topValue = isMobileWidth ? "-5vw" : "-2vw";
+          const topValue = isMobileWidth ? "-2vw" : "-5vw";
           gsap.to(el, {
             top: topValue,
             duration: 0.3,
@@ -55,7 +55,6 @@ export default function Skills() {
         }
       });
     };
-
     // Attach the event listener
     if (typeof window !== "undefined") {
       // Add an event listener for window resize
@@ -67,13 +66,14 @@ export default function Skills() {
       };
     }
   }, []);
+
   return (
     <>
       <FramerAnimation words={words} />
 
       <div className={styles.container}>
         <div className={styles.projectContainer}>
-          {isMobileWidth
+          {!isMobileWidth
             ? mobileProjects.map((project, index) => {
                 return (
                   <div

@@ -14,6 +14,13 @@ export const projects = [
         "linear-gradient(90deg, rgba(240,220,78,1) 12%, rgba(45,121,199,1) 100%)",
     },
     {
+      title: "FIGMA && ILLUSTRATOR", 
+      color: "#f0dc4e",
+      background: " rgb(240,220,78)",
+      background:
+        "linear-gradient(50deg, rgba(20,220,78,1) 12%, rgba(40,151,199,1) 100%)",
+    },
+    {
       title: "REACT.18 && NEXT.13",
       color: "#18F0E8",
       background: "rgb(0,216,255)",
@@ -53,6 +60,13 @@ export const projects = [
       title: "REDUX && ZUSTAND",
       color: "gray",
     },
+    {
+      title: "FIGMA && ILLUSTRATOR", 
+      color: "#f0dc4e",
+      background: " rgb(240,220,78)",
+      background:
+        "linear-gradient(50deg, rgba(20,220,78,1) 12%, rgba(40,151,199,1) 100%)",
+    },
   ];
  export const mobileProjects = [
     {
@@ -81,7 +95,7 @@ export const projects = [
       color: "#56A444",
     },
     {
-      title: "React",
+      title: "React18",
       color: "#4682B4",
     },
     {
