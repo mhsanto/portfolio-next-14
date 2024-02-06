@@ -9,7 +9,7 @@ import { projects, mobileProjects } from "./datas";
 const words = ["MY SKILLS"];
 
 export default function Skills() {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(null);
   const elementRefs = useRef([]);
   const isMobileWidth = useDevicewidth(480);
   const manageMouseEnter = (e, index) => {
