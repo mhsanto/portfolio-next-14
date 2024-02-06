@@ -41,7 +41,7 @@ const socials = [
     name: "santomh27",
     nameTwo: "@gmail.com",
     icon: <MailboxIcon />,
-    href: "",
+    href: "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZWPGKjwgXlHFBlZxTdnPMSFBVNRDSqbrZFRXmqxhRGWkKFFffBcDFCnBDCqJLvtXQxVcg",
   },
   {
     name: "+8801969",

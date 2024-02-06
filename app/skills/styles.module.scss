@@ -1,7 +1,7 @@
 .container {
   display: flex;
   height: 100vh;
-  padding-top: 4.1rem;
+  padding-top: 1.5rem;
   justify-content: center;
   align-items: center;
   @media (max-width: 480px) {
@@ -40,7 +40,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0px;
-  font-size: clamp(1.56rem, 0.58rem + 3.9vw, 4.5rem);
+  font-size: clamp(1.56rem, 0.58rem + 3.9vw, 3.4rem);
   padding-left: 10px;
   text-transform: uppercase;
   pointer-events: none;

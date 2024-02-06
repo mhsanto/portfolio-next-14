@@ -2,26 +2,21 @@
 import FramerAnimation from "@/components/FramerAnimation";
 import styles from "./styles.module.scss";
 import gsap from "gsap";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, } from "react";
 import useDevicewidth from "../../hooks/useDevicewidth";
-import { projects, mobileProjects } from "./datas";
+import { projects } from "./datas";
 
 const words = ["MY SKILLS"];
 
 export default function Skills() {
-  const [width, setWidth] = useState(null);
   const elementRefs = useRef([]);
   const isMobileWidth = useDevicewidth(480);
   const manageMouseEnter = (e, index) => {
     const topValue = isMobileWidth ? "-2vw" : "-5vw";
     gsap.to(e.target, {
       top: topValue,
-      backgroundColor: isMobileWidth
-        ? projects[index].color
-        : mobileProjects[index].color,
-      background: isMobileWidth
-        ? projects[index].background
-        : mobileProjects[index].background,
+      backgroundColor: projects[index].color,
+      background: projects[index].background,
       duration: 0.3,
     });
   };
@@ -73,31 +68,19 @@ export default function Skills() {
 
       <div className={styles.container}>
         <div className={styles.projectContainer}>
-          {!isMobileWidth
-            ? mobileProjects.map((project, index) => {
-                return (
-                  <div
-                    ref={(el) => (elementRefs.current[index] = el)}
-                    onMouseEnter={handleMouseEnter(index)}
-                    onMouseLeave={handleMouseLeave(index)}
-                    key={index}
-                  >
-                    <p>{project.title}</p>
-                  </div>
-                );
-              })
-            : projects.map((project, index) => {
-                return (
-                  <div
-                    ref={(el) => (elementRefs.current[index] = el)}
-                    onMouseEnter={handleMouseEnter(index)}
-                    onMouseLeave={handleMouseLeave(index)}
-                    key={index}
-                  >
-                    <p>{project.title}</p>
-                  </div>
-                );
-              })}
+          {projects.map((project, index) => {
+            return (
+              <div
+                ref={(el) => (elementRefs.current[index] = el)}
+                onMouseEnter={handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave(index)}
+                key={index}
+              >
+                <p>{project.title}</p>
+              </div>
+            );
+          })
+          }
         </div>
       </div>
     </>
