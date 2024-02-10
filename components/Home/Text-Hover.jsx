@@ -1,10 +1,9 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, {  useRef, useEffect } from "react";
 import styles from "./style.module.scss";
 import Link from "next/link";
 
 const TextHover = () => {
-  const [scale, setScale] = useState(1); // state for the scale of the spans
   const textContainers = useRef([]); // ref for the text containers
   const defaultScale = 1; // default scale value
   const maxScale = 2; // maximum scale value

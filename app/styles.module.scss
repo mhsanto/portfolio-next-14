@@ -1,26 +1,35 @@
 .main {
-  min-height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  position: relative;
 }
+
 .header {
   position: relative;
+
   .logo {
     font-size: 3.5rem;
     font-weight: bold;
     letter-spacing: -15px;
     padding-left: 3rem;
     padding-top: 1rem;
+
     @media (max-width: 480px) {
       font-size: 2.5rem;
       letter-spacing: -11px;
       padding-left: 0rem;
       padding-top: 0rem;
     }
+
     a {
       text-decoration: none;
       color: black;
     }
   }
 }
+
 .connect {
   position: absolute;
   left: 50%;
@@ -33,12 +42,13 @@
   text-transform: uppercase;
   justify-content: center;
   align-items: center;
-@media (max-width:480px) {
-  font-size: 14px;
-  left: 46%;
-  transform: translateX(-50%) translateY(67px);
-  
-}
+
+  @media (max-width:480px) {
+    font-size: 14px;
+    left: 46%;
+    transform: translateX(-50%) translateY(67px);
+
+  }
 }
 
 .hero {
@@ -47,17 +57,31 @@
   align-items: self-start;
   height: 100vh;
   flex-direction: column;
+
   h2 {
     font-weight: 600;
+    user-select: none;
     text-transform: uppercase;
     letter-spacing: -2px;
   }
+
   .headerTwo {
     font-size: 2rem;
+    user-select: none;
     text-align: center;
   }
+
   .headerOne {
     font-size: 4rem;
+    user-select: none;
   }
 }
 
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+}
