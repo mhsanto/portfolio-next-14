@@ -7,6 +7,7 @@ import FramerAnimation from "@/components/FramerAnimation";
 import Quotes from "./__components/Quotes";
 import { Suspense } from "react";
 import QuotesSkeleton from "./__components/QuotesSkeleton";
+import CanvasDrawing from "@/components/Home/CanvasDrawing";
 
 const Footer = async () => {
   const words = ["HIRE ME"];
@@ -47,6 +48,7 @@ const Footer = async () => {
             </p>
           </div>
         </div>
+        <CanvasDrawing/>
       </div>
     </>
   );

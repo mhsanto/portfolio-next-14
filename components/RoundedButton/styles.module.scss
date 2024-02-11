@@ -1,7 +1,8 @@
 .button {
   width: 8.5rem;
   height: 8.5rem;
-
+  position: relative;
+  z-index: 30;
   color: white;
   background: #000;
   font-weight: 600;

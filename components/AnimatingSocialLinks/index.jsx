@@ -5,7 +5,6 @@ import "./styles.css";
 import {
   GithubIcon,
   LinkedinIcon,
-  Copy,
   FacebookIcon,
   InstagramIcon,
   MailboxIcon,

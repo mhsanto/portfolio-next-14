@@ -1,5 +1,8 @@
 .container {
+  position: relative;
+  z-index: 30;
   width: 100%;
+
 }
 
 .container .item {
@@ -15,6 +18,7 @@
   transition: all 0.4s ease-in-out;
   text-transform: uppercase;
   width: 100vw;
+  user-select: none;
 }
 
 .img {
@@ -29,6 +33,7 @@
 .item:hover {
   background-color: #000;
   color: white;
+  user-select: none;
 }
 
 .item:hover .img {

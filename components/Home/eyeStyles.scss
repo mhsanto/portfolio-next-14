@@ -1,0 +1,42 @@
+
+//eye animation
+.eyes-follow-tired {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .eye-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .eyes {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .eye {
+                border-radius: 50%;
+                height: 90px;
+                border: 5px solid rgba(0, 0, 0, 0.1);
+                width: 90px;
+                background-color: red;
+
+                .pupil {
+                    position: absolute;
+                    background-color: black;
+                    border-radius: 50%;
+                    width: 18px;
+                    height: 18px;
+                    left: 50px;
+                    top: 35px;
+                }
+            }
+        }
+    }
+
+}
