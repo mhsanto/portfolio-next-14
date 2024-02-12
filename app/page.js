@@ -7,7 +7,6 @@ import { LinkedinIcon } from "lucide-react";
 import HomeText from "../components/Home/Home";
 import CanvasDrawing from "@/components/Home/CanvasDrawing";
 import TextHover from "@/components/Home/TextHover";
-import EyesFollow from "@/components/Home/EyesFollow";
 
 const words = [
   "FRONTEND DEVELOPER",
@@ -31,9 +30,9 @@ export default function Home() {
       <FramerAnimation words={words} />
       <header className={styles.header}>
         <div className={styles.connect}>
-          <span>Let's Connect </span>
+          <span className={styles.spanText}>Let's Connect </span>
           <Link href="https://www.linkedin.com/in/mh-santo/" target="_blank">
-            <LinkedinIcon size={30} />
+            <LinkedinIcon size={20} />
           </Link>
         </div>
       </header>

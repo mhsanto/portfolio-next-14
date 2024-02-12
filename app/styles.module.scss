@@ -33,6 +33,7 @@
 .connect {
   position: absolute;
   left: 50%;
+  z-index: 23;
   font-weight: 500;
   font-size: 1.2rem;
   top: 25%;
@@ -42,7 +43,9 @@
   text-transform: uppercase;
   justify-content: center;
   align-items: center;
-
+.spanText{
+  white-space: nowrap;
+}
   @media (max-width:480px) {
     font-size: 14px;
     left: 46%;
