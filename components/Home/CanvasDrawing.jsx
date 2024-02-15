@@ -1,5 +1,4 @@
 "use client"
-// CanvasDrawing.js
 import React, { useEffect } from "react";
 import styles from "./style.module.scss";
 
@@ -21,13 +20,16 @@ const CanvasDrawing = () => {
 
     function draw(e) {
       if (!isDrawing) return;
+      const x = e.clientX || e.touches[0].clientX;
+      const y = e.clientY || e.touches[0].clientY;
+
       ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
       ctx.beginPath();
       ctx.moveTo(lastX, lastY);
-      ctx.lineTo(e.clientX, e.clientY);
+      ctx.lineTo(x, y);
       ctx.stroke();
-      lastX = e.clientX;
-      lastY = e.clientY;
+      lastX = x;
+      lastY = y;
       hue++;
       if (hue >= 360) {
         hue = 0;
@@ -38,32 +40,44 @@ const CanvasDrawing = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
 
-    function handleMouseDown(e) {
+    function handleStart(e) {
       isDrawing = true;
-      lastX = e.clientX;
-      lastY = e.clientY;
+      const x = e.clientX || e.touches[0].clientX;
+      const y = e.clientY || e.touches[0].clientY;
+      lastX = x;
+      lastY = y;
     }
 
-    function handleMouseUp() {
+    function handleEnd() {
       isDrawing = false;
       clearCanvas();
     }
 
-    function handleMouseOut() {
+    function handleCancel() {
       isDrawing = false;
     }
 
-    canvas.addEventListener("mousedown", handleMouseDown);
+    canvas.addEventListener("mousedown", handleStart);
     canvas.addEventListener("mousemove", draw);
-    canvas.addEventListener("mouseup", handleMouseUp);
-    canvas.addEventListener("mouseout", handleMouseOut);
+    canvas.addEventListener("mouseup", handleEnd);
+    canvas.addEventListener("mouseout", handleCancel);
+
+    canvas.addEventListener("touchstart", handleStart);
+    canvas.addEventListener("touchmove", draw);
+    canvas.addEventListener("touchend", handleEnd);
+    canvas.addEventListener("touchcancel", handleCancel);
 
     // Cleanup event listeners when the component unmounts
     return () => {
-      canvas.removeEventListener("mousedown", handleMouseDown);
+      canvas.removeEventListener("mousedown", handleStart);
       canvas.removeEventListener("mousemove", draw);
-      canvas.removeEventListener("mouseup", handleMouseUp);
-      canvas.removeEventListener("mouseout", handleMouseOut);
+      canvas.removeEventListener("mouseup", handleEnd);
+      canvas.removeEventListener("mouseout", handleCancel);
+
+      canvas.removeEventListener("touchstart", handleStart);
+      canvas.removeEventListener("touchmove", draw);
+      canvas.removeEventListener("touchend", handleEnd);
+      canvas.removeEventListener("touchcancel", handleCancel);
     };
   }, []);
 
