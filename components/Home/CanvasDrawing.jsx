@@ -1,8 +1,10 @@
-"use client"
+"use client";
 import React, { useEffect } from "react";
 import styles from "./style.module.scss";
+import useDeviceWidth from "@/hooks/useDevicewidth";
 
 const CanvasDrawing = () => {
+  const isMobileWidth = useDeviceWidth(480);
   useEffect(() => {
     const canvas = document.querySelector("#" + styles.canvas);
     const ctx = canvas.getContext("2d");
@@ -12,7 +14,7 @@ const CanvasDrawing = () => {
     ctx.strokeStyle = "#BADA55";
     ctx.lineJoin = "round";
     ctx.lineCap = "round";
-    ctx.lineWidth = 60;
+    ctx.lineWidth = isMobileWidth ? 60 : 30;
     let isDrawing = false;
     let lastX = 0;
     let lastY = 0;

@@ -11,35 +11,52 @@ const words = ["MY SKILLS"];
 export default function Skills() {
   const elementRefs = useRef([]);
   const isMobileWidth = useDevicewidth(480);
-  const manageMouseEnter = (e, index) => {
-    const topValue = isMobileWidth ? "-2vw" : "-5vw";
-    gsap.to(e.target, {
+
+  const manageHoverStyles = (el, index, isHovered) => {
+    const topValue = isHovered ? (isMobileWidth ? "-2vw" : "-5vw") : "0";
+    const backgroundColor = isHovered ? projects[index].color : "white";
+    const background = isHovered ? projects[index].background : "white";
+
+    gsap.to(el, {
       top: topValue,
-      backgroundColor: projects[index].color,
-      background: projects[index].background,
+      backgroundColor,
+      background,
       duration: 0.3,
     });
   };
-  const manageMouseLeave = (e, index) => {
-    gsap.to(e.target, {
-      top: "0",
-      backgroundColor: "white",
-      background: "white",
-      duration: 0.3,
-      delay: 0.1,
-    });
-  };
+
   const handleMouseEnter = (index) => (e) => {
-    manageMouseEnter(e, index);
+    manageHoverStyles(e.target, index, true);
   };
 
   const handleMouseLeave = (index) => (e) => {
-    manageMouseLeave(e, index);
+    manageHoverStyles(e.target, index, false);
   };
+
+  const handleTouchStart = (index) => (e) => {
+    e.preventDefault();
+    manageHoverStyles(elementRefs.current[index], index, true);
+  };
+
+  const handleTouchMove = (index) => (e) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    const target = document.elementFromPoint(touch.clientX, touch.clientY);
+
+    if (elementRefs.current[index] === target) {
+      manageHoverStyles(elementRefs.current[index], index, true);
+    } else {
+      manageHoverStyles(elementRefs.current[index], index, false);
+    }
+  };
+
+  const handleTouchEnd = (index) => (e) => {
+    e.preventDefault();
+    manageHoverStyles(elementRefs.current[index], index, false);
+  };
+
   useEffect(() => {
-    // Add an event listener for window resize
     const handleResize = () => {
-      // Rerun the animation with the updated top value when the window is resized
       elementRefs.current.forEach((el, index) => {
         if (el) {
           const topValue = isMobileWidth ? "-2vw" : "-5vw";
@@ -50,17 +67,16 @@ export default function Skills() {
         }
       });
     };
-    // Attach the event listener
+
     if (typeof window !== "undefined") {
-      // Add an event listener for window resize
       window.addEventListener("resize", handleResize);
 
-      // Cleanup the event listener on component unmount
       return () => {
         window.removeEventListener("resize", handleResize);
       };
     }
-  }, []);
+  }, [isMobileWidth]);
+
 
   return (
     <>

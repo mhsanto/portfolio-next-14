@@ -1,5 +1,4 @@
 "use client";
-import React, { useState } from "react";
 import useMightyMouse from "react-hook-mighty-mouse";
 
 import "./eyeStyles.scss";

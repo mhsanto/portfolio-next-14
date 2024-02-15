@@ -4,7 +4,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import useMousePosition from "@/hooks/useMousePostion";
 import FramerAnimation from "@/components/FramerAnimation";
+import { Bebas_Neue } from "next/font/google";
 
+const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 export default function About() {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
@@ -44,6 +46,7 @@ export default function About() {
             onTouchEnd={() => {
               setIsHovered(false);
             }}
+            className={bebas.className}
           >
             When I'm not creating or exploring new web experiences, I'm probably
             watching anime or playing video games. I love the challenge of
@@ -72,7 +75,11 @@ export default function About() {
         </motion.div>
 
         <div className={styles.body}>
-          <motion.p initial="initial" animate="animate">
+          <motion.p
+            initial="initial"
+            animate="animate"
+            className={bebas.className}
+          >
             I'm <span>Mahmodul Hasan Santo</span> a{" "}
             <span>Frontend Web Developer</span>.I’ve been learning frontend
             development for a year and a half. I’ve learned a lot in that time

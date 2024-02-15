@@ -1,3 +1,21 @@
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    gap: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: clamp(2.5rem, 0.6356rem + 13.5593vi, 12.5rem);
+        line-height: 0;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+}
+
 .container {
     position: absolute;
     bottom: 0;

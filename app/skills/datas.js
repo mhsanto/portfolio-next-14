@@ -95,7 +95,7 @@
       color: "#56A444",
     },
     {
-      title: "React",
+      title: "React JS",
       color: "#4682B4",
     },
     {
@@ -103,7 +103,7 @@
       color: "#4682B4",
     },
     {
-      title: "Node/Express",
+      title: "Node JS",
       color: "#16BECB",
     },
     {
@@ -120,7 +120,7 @@
     },
   
     {
-      title: "Tailwind/MUI",
+      title: "Tailwind",
       color: "#91F018",
     },
     {
@@ -139,10 +139,10 @@
     },
     {
       title: "Firebase",
-      color: "#F06318",
+      color: "yellow",
 
       background:
-        "linear-gradient(90deg, rgba(240,99,24,1) 22%, rgba(33,76,229,1) 100%)",
+        "linear-gradient(90deg, rgba(40,99,24,1) 22%, rgba(33,76,229,1) 100%)",
     },
     {
       title: "Clerk",
@@ -166,7 +166,7 @@
         "linear-gradient(90deg, rgba(240,220,78,1) 12%, rgba(45,121,199,1) 100%)",
     },
     {
-      title: "Figma/Adobe",
+      title: "Figma",
       color: "#18F0E8",
       background:
         "linear-gradient(90deg, rgba(0,216,255,1) 37%, rgba(255,255,255,1) 100%)",

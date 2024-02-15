@@ -13,7 +13,7 @@ const Footer = async () => {
   const words = ["HIRE ME"];
   return (
     <>
-      <FramerAnimation words={words} />
+      {/* <FramerAnimation words={words} /> */}
 
       <div className={styles.hire}>
         <Suspense fallback={<QuotesSkeleton />}>
@@ -40,15 +40,9 @@ const Footer = async () => {
             </div>
           </div>
           <AnimatingSocialLinks />
-          <div className={styles.footer}>
-            <p>
-              {" "}
-              &copy;{new Date().getFullYear()} Mahmodul Hasan Santo.All Rights
-              Reserved{" "}
-            </p>
-          </div>
+      
         </div>
-        <CanvasDrawing/>
+        <CanvasDrawing />
       </div>
     </>
   );
