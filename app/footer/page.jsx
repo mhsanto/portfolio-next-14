@@ -4,9 +4,9 @@ import RoundedButton from "@/components/RoundedButton";
 
 import AnimatingSocialLinks from "@/components/AnimatingSocialLinks";
 import FramerAnimation from "@/components/FramerAnimation";
-import Quotes from "./__components/Quotes";
+import {Quotes} from "./__components/Quotes";
 import { Suspense } from "react";
-import QuotesSkeleton from "./__components/QuotesSkeleton";
+import {QuotesSkeleton} from "./__components/QuotesSkeleton";
 import CanvasDrawing from "@/components/Home/CanvasDrawing";
 
 const Footer = async () => {

@@ -4,7 +4,7 @@ const playflair = Playfair_Display({
   subsets: ["latin"],
   weights: ["400","500","600", "700"],
 });
-export default async function Quotes({ styles }) {
+export async function Quotes({ styles }) {
   unstable_noStore();
 
   const res = await fetch("http://api.quotable.io/random/")

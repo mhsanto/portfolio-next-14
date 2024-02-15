@@ -27,7 +27,7 @@ const words = [
 export default function Home() {
   return (
     <main className={styles.main}>
-      {/* <FramerAnimation words={words} /> */}
+      <FramerAnimation words={words} />
       <header className={styles.header}>
         <div className={styles.connect}>
           <span className={styles.spanText}>Let's Connect </span>
