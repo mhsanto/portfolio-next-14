@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-
   .mask,
   .body {
     flex-direction: column;
@@ -21,8 +20,8 @@
     line-height: 60px;
     cursor: default;
 
-    @media (max-width: 960px) {
-      font-size: 35px;
+    @media (max-width: 1200px) {
+      font-size: 30px;
       padding: 0 2rem;
       padding-top: 2rem;
       line-height: 45px;
@@ -32,7 +31,7 @@
       font-size: 23px;
       line-height: 37px;
       padding: 0 0.2rem;
-      padding-top: 0;
+      padding-top: 3rem;
     }
 
     p {
@@ -50,7 +49,6 @@
 
     span {
       color: #ec4e39;
-
       &:nth-child(2) {
         color: red;
         font-weight: 500;
@@ -66,5 +64,9 @@
     position: absolute;
     color: white;
     z-index: 12;
+    @media screen and (max-width: 480px) {
+      mask-size: 30px;
+      
+    }
   }
 }

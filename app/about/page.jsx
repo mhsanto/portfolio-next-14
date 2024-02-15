@@ -49,10 +49,13 @@ export default function About() {
             className={bebas.className}
           >
             When I'm not creating or exploring new web experiences, I'm probably
-            watching anime or playing video games. I love the challenge of
+            watching anime or hanging out  with my friends. I love the challenge of
             solving problems with code, and there's nothing more satisfying than
             seeing lines of code come to life as something real and
-            useful.Exploring new technologies keeps me excited
+            useful. I’m quickly
+            adaptable and well-organized, able to work independently or
+            collaboratively with a team. I am always looking for new
+            opportunities to learn and grow.
           </motion.p>
           <motion.p
             initial="initial"
@@ -69,6 +72,7 @@ export default function About() {
             onTouchEnd={() => {
               setIsHovered(false);
             }}
+            className={bebas.className}
           >
             "Treat others how you would like to be treated."
           </motion.p>
@@ -81,15 +85,21 @@ export default function About() {
             className={bebas.className}
           >
             I'm <span>Mahmodul Hasan Santo</span> a{" "}
-            <span>Frontend Web Developer</span>.I’ve been learning frontend
-            development for a year and a half. I’ve learned a lot in that time
-            and now I want to see how far I’ve come. Able to perform
-            successfully both alone and in teams. My long-term objective is to
-            work as a senior full-stack developer.
+            <span>Fullstack developer</span> who loves creating interactive and
+            responsive websites that delight users and drive business results.I
+            have built websites for clients in various industries, using
+            technologies such as HTML, CSS, JavaScript, React, Next.js, Node,
+            Express ,Mongodb,Prisma and so on. My long-term objective is to work
+            as a senior full-stack developer and expand my skills and knowledge
+            in web development.
           </motion.p>
 
-          <motion.p initial="initial" animate="animate">
-            My Motto is...
+          <motion.p
+            initial="initial"
+            animate="animate"
+            className={bebas.className}
+          >
+            In life i try to follow to the golden rule
           </motion.p>
         </div>
       </main>
