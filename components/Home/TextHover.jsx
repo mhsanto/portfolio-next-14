@@ -1,57 +1,68 @@
 "use client";
-import React, {  useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "./style.module.scss";
 import Link from "next/link";
 
 const TextHover = () => {
-  const textContainers = useRef([]); // ref for the text containers
-  const defaultScale = 1; // default scale value
-  const maxScale = 2; // maximum scale value
-  const neighborScale = 1.5; // scale value for the neighboring spans
+  const textContainers = useRef([]);
+  const defaultScale = 1;
+  const maxScale = 2;
+  const neighborScale = 1.5;
 
-  // function to handle the mouse move event
-  const handleMouseMove = (e) => {
-    const target = e.target; // the span element that is hovered
-    const textContainer = e.currentTarget; // the text container element that contains the span
-    const spans = textContainer.querySelectorAll("span"); // the span elements in the text container
-    const index = Array.from(spans).indexOf(target); // the index of the span element that is hovered
-    // loop through the span elements and update their scale based on their index
+  const handleMove = (index, spans, newScale) => {
     spans.forEach((span, i) => {
-      let newScale = defaultScale; // the new scale value for the span element
-      if (i === index) {
-        // if the span element is the one that is hovered, set the new scale to the maximum value
-        newScale = maxScale;
-      } else if (i === index - 1 || i === index + 1) {
-        // if the span element is adjacent to the one that is hovered, set the new scale to the neighbor value
-        newScale = neighborScale;
-      }
-      span.style.transform = `scaleY(${newScale})`; // apply the new scale value to the span element
+      span.style.transform = `scaleY(${
+        i === index
+          ? maxScale
+          : i === index - 1 || i === index + 1
+          ? neighborScale
+          : newScale
+      })`;
     });
   };
 
-  // function to handle the mouse leave event
+  const handleMouseMove = (e) => {
+    const target = e.target;
+    const textContainer = e.currentTarget;
+    const spans = textContainer.querySelectorAll("span");
+    const index = Array.from(spans).indexOf(target);
+    handleMove(index, spans, defaultScale);
+  };
+
+  const handleTouchMove = (e) => {
+    e.preventDefault(); // Prevent scrolling while swiping
+    const touch = e.touches[0];
+    const target = document.elementFromPoint(touch.clientX, touch.clientY);
+    const textContainer = e.currentTarget;
+    const spans = textContainer.querySelectorAll("span");
+    const index = Array.from(spans).indexOf(target);
+    handleMove(index, spans, defaultScale);
+  };
+
   const handleMouseLeave = (e) => {
-    const textContainer = e.currentTarget; // the text container element that the mouse leaves
-    const spans = textContainer.querySelectorAll("span"); // the span elements in the text container
-    // loop through the span elements and reset their scale to the default value
+    const textContainer = e.currentTarget;
+    const spans = textContainer.querySelectorAll("span");
     spans.forEach((span) => {
       span.style.transform = `scaleY(${defaultScale})`;
     });
   };
 
-  // effect to add the event listeners to the text containers
   useEffect(() => {
-    // loop through the text containers and add the mouse move and mouse leave event listeners
     textContainers?.current.forEach((textContainer) => {
       textContainer?.addEventListener("mousemove", handleMouseMove);
       textContainer?.addEventListener("mouseleave", handleMouseLeave);
+      textContainer?.addEventListener("touchmove", handleTouchMove, {
+        passive: false,
+      });
+      textContainer?.addEventListener("touchend", handleMouseLeave);
     });
-    // return a cleanup function to remove the event listeners
+
     return () => {
-      // loop through the text containers and remove the mouse move and mouse leave event listeners
       textContainers.current.forEach((textContainer) => {
         textContainer?.removeEventListener("mousemove", handleMouseMove);
         textContainer?.removeEventListener("mouseleave", handleMouseLeave);
+        textContainer?.removeEventListener("touchmove", handleTouchMove);
+        textContainer?.removeEventListener("touchend", handleMouseLeave);
       });
     };
   }, []); // run the effect only once when the component mounts
