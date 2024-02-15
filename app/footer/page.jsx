@@ -13,7 +13,7 @@ const Footer = async () => {
   const words = ["HIRE ME"];
   return (
     <>
-      {/* <FramerAnimation words={words} /> */}
+      <FramerAnimation words={words} />
 
       <div className={styles.hire}>
         <Suspense fallback={<QuotesSkeleton />}>
